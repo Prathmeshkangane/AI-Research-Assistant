@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ paper.title }}</title>
+</head>
+
+<body>
+
+    <h1>{{ paper.title }}</h1>
+
+    <p>
+        <strong>Authors:</strong>
+        {{ paper.authors }}
+    </p>
+
+    <p>
+        <strong>Categories:</strong>
+        {{ paper.categories }}
+    </p>
+
+    <p>
+        <strong>Updated:</strong>
+        {{ paper.update_date }}
+    </p>
+
+    <hr>
+
+    <h3>Abstract</h3>
+
+    <p>
+        {{ paper.abstract }}
+    </p>
+
+    <br>
+
+    <a href="/search">
+        Back to Search
+    </a>
+
+    <hr>
+
+    <h2>Recommended Papers</h2>
+
+    {% for paper in recommendations %}
+
+    <p>
+        <a href="/paper/{{ paper.id }}">
+            {{ paper.title }}
+        </a>
+    </p>
+
+    {% endfor %}
+
+</body>
+
+</html>

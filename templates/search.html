@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Papers</title>
+</head>
+
+<body>
+
+    <h2>Search Research Papers</h2>
+
+    <form action="/search" method="GET">
+
+        <input type="text" name="q" value="{{ query }}" placeholder="Search papers...">
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+    <hr>
+
+    {% for paper in papers %}
+
+    <h3>
+        <a href="/paper/{{ paper.id }}">
+            {{ paper.title }}
+        </a>
+    </h3>
+
+    <p>
+        <strong>Category:</strong>
+        {{ paper.categories }}
+    </p>
+
+    <p>
+        {{ paper.abstract[:300] }}...
+    </p>
+
+    <hr>
+
+    {% endfor %}
+
+</body>
+
+</html>
