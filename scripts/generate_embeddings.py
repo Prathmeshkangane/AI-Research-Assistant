@@ -3,10 +3,13 @@ import os
 
 sys.path.append(
     os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..")
+        os.path.join(
+            os.path.dirname(__file__),
+            ".."
+        )
     )
 )
-import os
+
 import pickle
 import numpy as np
 
@@ -15,31 +18,56 @@ from sentence_transformers import SentenceTransformer
 from app import app
 from models.paper import Paper
 
-os.makedirs("embeddings", exist_ok=True)
+# Create embeddings directory
+os.makedirs(
+    "embeddings",
+    exist_ok=True
+)
 
 print("Loading model...")
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer(
+    "all-MiniLM-L6-v2"
+)
 
 with app.app_context():
 
     papers = Paper.query.all()
 
-    print(f"Loaded {len(papers)} papers")
+    print(
+        f"Loaded {len(papers)} papers"
+    )
 
-    paper_ids = [paper.id for paper in papers]
-
-    abstracts = [
-        paper.abstract
+    paper_ids = [
+        paper.id
         for paper in papers
     ]
 
-    print("Generating embeddings...")
+    # Better semantic representation
+    texts = [
+        f"""
+        Title: {paper.title}
+
+        Categories: {paper.categories}
+
+        Abstract: {paper.abstract}
+        """
+        for paper in papers
+    ]
+
+    print(
+        "Generating embeddings..."
+    )
 
     embeddings = model.encode(
-        abstracts,
+        texts,
         show_progress_bar=True,
-        batch_size=32
+        batch_size=32,
+        convert_to_numpy=True
+    )
+
+    print(
+        f"Embedding Shape: {embeddings.shape}"
     )
 
     np.save(
@@ -57,4 +85,6 @@ with app.app_context():
             f
         )
 
-print("Embeddings saved successfully")
+print(
+    "Embeddings saved successfully"
+)

@@ -1,3 +1,4 @@
+import time
 import pickle
 import faiss
 import numpy as np
@@ -30,10 +31,12 @@ def semantic_search(
         [query]
     ).astype("float32")
 
+    start = time.time()
     distances, indices = index.search(
         query_embedding,
         top_k
     )
+    print(f"FAISS search took {time.time() - start:.4f}s")
 
     results = []
 

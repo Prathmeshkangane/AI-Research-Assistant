@@ -1,46 +1,287 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account — ResearchAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0D0F1A;
+            --surface: #141728;
+            --panel: #1C2140;
+            --accent: #6C63FF;
+            --accent-2: #A78BFA;
+            --danger: #FF5C7A;
+            --text: #E8EAF6;
+            --muted: #8892B0;
+            --border: #252B4A;
+            --radius: 12px;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            background: var(--ink);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orb {
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.13) 0%, transparent 65%);
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 520px;
+            padding: 40px 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .flash-message {
+            background: rgba(255, 92, 122, 0.12);
+            border: 1px solid rgba(255, 92, 122, 0.35);
+            color: #FF8FA3;
+            border-radius: var(--radius);
+            padding: 12px 16px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .flash-message p {
+            line-height: 1.5;
+        }
+
+        .flash-message p+p {
+            margin-top: 4px;
+        }
+
+        .form-eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .form-subtitle {
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--muted);
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 14px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+        }
+
+        input::placeholder {
+            color: #3A4060;
+        }
+
+        .password-hint {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            border: none;
+            border-radius: var(--radius);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.15s;
+            letter-spacing: 0.3px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .form-footer a {
+            color: var(--accent-2);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .terms {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 16px;
+            line-height: 1.5;
+        }
+
+        .terms a {
+            color: var(--muted);
+        }
+    </style>
 </head>
+
 <body>
+    <div class="orb"></div>
+    <div class="page">
+        <a href="/" class="brand">
+            <div class="brand-icon">🔬</div>
+            <span class="brand-name">ResearchAI</span>
+        </a>
+        <div class="card">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="flash-message">
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
 
-<h2>Create Account</h2>
+            <div class="form-eyebrow">Get started</div>
+            <h1 class="form-title">Create your account</h1>
+            <p class="form-subtitle">Join thousands of researchers using AI to explore literature.</p>
 
-<form action="/register" method="POST">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="e.g. john_researcher" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="you@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Min. 8 characters" required>
+                    <p class="password-hint">Use a mix of letters, numbers, and symbols.</p>
+                </div>
+                <button type="submit" class="submit-btn">Create account →</button>
+            </form>
 
-    <input
-        type="text"
-        name="username"
-        placeholder="Username"
-        required
-    >
-
-    <br><br>
-
-    <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        required
-    >
-
-    <br><br>
-
-    <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        required
-    >
-
-    <br><br>
-
-    <button type="submit">
-        Register
-    </button>
-
-</form>
-
+            <p class="form-footer">Already have an account? <a href="/login">Sign in</a></p>
+            <p class="terms">By registering you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy
+                    Policy</a>.</p>
+        </div>
+    </div>
 </body>
+
 </html>

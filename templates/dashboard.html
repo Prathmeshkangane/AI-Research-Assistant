@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — AI Research Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0D0F1A;
+            --surface: #141728;
+            --panel: #1C2140;
+            --accent: #6C63FF;
+            --accent-2: #A78BFA;
+            --accent-glow: rgba(108, 99, 255, 0.15);
+            --danger: #FF5C7A;
+            --success: #34D399;
+            --warning: #FBBF24;
+            --text: #E8EAF6;
+            --muted: #8892B0;
+            --border: #252B4A;
+            --radius: 12px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: var(--ink);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Orb background */
+        .orb {
+            position: fixed;
+            top: -180px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Nav */
+        nav {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 48px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(13, 15, 26, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-brand-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .nav-brand-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+        }
+
+        .nav-user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-username {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .nav-username span {
+            color: var(--accent-2);
+            font-weight: 500;
+        }
+
+        .logout-btn {
+            padding: 7px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .logout-btn:hover {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 72px 48px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .hero-title em {
+            font-style: normal;
+            color: var(--accent-2);
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            color: var(--muted);
+            max-width: 460px;
+            line-height: 1.6;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto 48px;
+            padding: 0 48px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 28px;
+            flex: 1;
+        }
+
+        .stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-2);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Action grid */
+        .actions-section {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px 80px;
+        }
+
+        .actions-label {
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .action-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            transition: all 0.25s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--accent-glow), transparent);
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .action-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(108, 99, 255, 0.12);
+        }
+
+        .action-card:hover::before {
+            opacity: 1;
+        }
+
+        .action-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .icon-blue {
+            background: rgba(108, 99, 255, 0.15);
+        }
+
+        .icon-green {
+            background: rgba(52, 211, 153, 0.12);
+        }
+
+        .icon-yellow {
+            background: rgba(251, 191, 36, 0.12);
+        }
+
+        .icon-teal {
+            background: rgba(56, 189, 248, 0.12);
+        }
+
+        .action-content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .action-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+
+        .action-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .action-arrow {
+            position: relative;
+            z-index: 1;
+            color: var(--muted);
+            font-size: 18px;
+            align-self: center;
+            transition: transform 0.2s;
+        }
+
+        .action-card:hover .action-arrow {
+            transform: translateX(4px);
+            color: var(--accent-2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orb"></div>
+
+    <nav>
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-brand-icon">🔬</div>
+            <span class="nav-brand-text">ResearchAI</span>
+        </a>
+        <div class="nav-user">
+            <span class="nav-username">Hello, <span>{{ username }}</span></span>
+            <a href="/logout" class="logout-btn">Sign out</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-eyebrow">Research Dashboard</div>
+        <h1 class="hero-title">Your <em>intelligent</em><br>research workspace</h1>
+        <p class="hero-sub">Discover papers, ask AI, and build your personal library — all in one place.</p>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-num">{{ "{:,}".format(paper_count) }}+</div>
+            <div class="stat-label">Papers indexed</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">AI</div>
+            <div class="stat-label">Powered answers</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">{{ saved_count }}</div>
+            <div class="stat-label">Your saved papers</div>
+        </div>
+    </div>
+
+    <div class="actions-section">
+        <div class="actions-label">What would you like to do?</div>
+        <div class="actions-grid">
+            <a href="/search" class="action-card">
+                <div class="action-icon icon-blue">🔍</div>
+                <div class="action-content">
+                    <div class="action-title">Search Papers</div>
+                    <div class="action-desc">Explore millions of research papers by topic, author, or keyword.</div>
+                </div>
+                <div class="action-arrow">→</div>
+            </a>
+            <a href="/ask" class="action-card">
+                <div class="action-icon icon-green">🤖</div>
+                <div class="action-content">
+                    <div class="action-title">Ask AI</div>
+                    <div class="action-desc">Get synthesized answers from research literature, instantly.</div>
+                </div>
+                <div class="action-arrow">→</div>
+            </a>
+            <a href="/saved-papers" class="action-card">
+                <div class="action-icon icon-yellow">📑</div>
+                <div class="action-content">
+                    <div class="action-title">Saved Papers</div>
+                    <div class="action-desc">Review and manage your personal paper collection.</div>
+                </div>
+                <div class="action-arrow">→</div>
+            </a>
+            <a href="/history" class="action-card">
+                <div class="action-icon icon-teal">🕐</div>
+                <div class="action-content">
+                    <div class="action-title">History</div>
+                    <div class="action-desc">Revisit your past AI conversations and research queries.</div>
+                </div>
+                <div class="action-arrow">→</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

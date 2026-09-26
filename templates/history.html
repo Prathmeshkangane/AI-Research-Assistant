@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>History — ResearchAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0D0F1A;
+            --surface: #141728;
+            --panel: #1C2140;
+            --accent: #6C63FF;
+            --accent-2: #A78BFA;
+            --text: #E8EAF6;
+            --muted: #8892B0;
+            --border: #252B4A;
+            --radius: 12px;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            background: var(--ink);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 18px 48px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(13, 15, 26, 0.9);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            text-decoration: none;
+            margin-right: auto;
+        }
+
+        .nav-brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .nav-brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+            background: var(--panel);
+        }
+
+        .nav-link.active {
+            color: var(--accent-2);
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 48px 80px;
+        }
+
+        .page-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .chat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 16px;
+        }
+
+        .chat-question {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .chat-answer {
+            font-size: 14px;
+            color: #C0C8E0;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .chat-time {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .empty {
+            text-align: center;
+            padding: 80px 24px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-brand-icon">🔬</div>
+            <span class="nav-brand-name">ResearchAI</span>
+        </a>
+        <a href="/search" class="nav-link">Search</a>
+        <a href="/ask" class="nav-link">Ask AI</a>
+        <a href="/saved-papers" class="nav-link">Saved</a>
+        <a href="/history" class="nav-link active">History</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Question History</h1>
+
+        {% for chat in chats %}
+        <div class="chat-card">
+            <div class="chat-question">{{ chat.question }}</div>
+            <div class="chat-answer">{{ chat.answer }}</div>
+            <div class="chat-time">{{ chat.created_at }}</div>
+        </div>
+        {% else %}
+        <div class="empty">No questions asked yet.</div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

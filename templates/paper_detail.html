@@ -1,57 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>{{ paper.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ paper.title }} — ResearchAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=Lora:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0D0F1A;
+            --surface: #141728;
+            --panel: #1C2140;
+            --accent: #6C63FF;
+            --accent-2: #A78BFA;
+            --text: #E8EAF6;
+            --muted: #8892B0;
+            --border: #252B4A;
+            --radius: 12px;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            background: var(--ink);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 18px 48px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(13, 15, 26, 0.9);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            text-decoration: none;
+            margin-right: auto;
+        }
+
+        .nav-brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .nav-brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .nav-back {
+            font-size: 14px;
+            color: var(--muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--text);
+        }
+
+        .layout {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 48px 80px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+
+        /* Main content */
+        .paper-header {
+            margin-bottom: 32px;
+        }
+
+        .paper-cats {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .cat-badge {
+            padding: 4px 12px;
+            background: rgba(108, 99, 255, 0.12);
+            border-radius: 20px;
+            font-size: 11px;
+            color: var(--accent-2);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .paper-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .paper-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .meta-item strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .action-row {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent-2);
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 28px 0;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .abstract-text {
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #C0C8E0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: relative;
+        }
+
+        .sidebar-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .rec-item {
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .rec-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .rec-link {
+            font-size: 14px;
+            color: var(--text);
+            text-decoration: none;
+            line-height: 1.4;
+            transition: color 0.2s;
+            display: block;
+        }
+
+        .rec-link:hover {
+            color: var(--accent-2);
+        }
+
+        .rec-meta {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 32px 24px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <h1>{{ paper.title }}</h1>
-
-    <p>
-        <strong>Authors:</strong>
-        {{ paper.authors }}
-    </p>
-
-    <p>
-        <strong>Categories:</strong>
-        {{ paper.categories }}
-    </p>
-
-    <p>
-        <strong>Updated:</strong>
-        {{ paper.update_date }}
-    </p>
-
-    <hr>
-
-    <h3>Abstract</h3>
-
-    <p>
-        {{ paper.abstract }}
-    </p>
-
-    <br>
-
-    <a href="/search">
-        Back to Search
-    </a>
-
-    <hr>
-
-    <h2>Recommended Papers</h2>
-
-    {% for paper in recommendations %}
-
-    <p>
-        <a href="/paper/{{ paper.id }}">
-            {{ paper.title }}
+    <nav>
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-brand-icon">🔬</div>
+            <span class="nav-brand-name">ResearchAI</span>
         </a>
-    </p>
+        <a href="/search" class="nav-back">← Back to Search</a>
+    </nav>
 
-    {% endfor %}
+    <div class="layout">
+        <main>
+            <div class="paper-header">
+                <div class="paper-cats">
+                    {% for cat in paper.categories.split(',') %}
+                    <span class="cat-badge">{{ cat.strip() }}</span>
+                    {% endfor %}
+                </div>
+                <h1 class="paper-title">{{ paper.title }}</h1>
+                <div class="paper-meta-row">
+                    <div class="meta-item">✍️ <strong>{{ paper.authors }}</strong></div>
+                    <div class="meta-item">📅 Updated <strong>{{ paper.update_date }}</strong></div>
+                </div>
+            </div>
 
+            <div class="action-row">
+                <a href="/save/{{ paper.id }}" class="btn btn-primary">📑 Save Paper</a>
+                <a href="/summarize/{{ paper.id }}" class="btn btn-outline">✨ AI Summary</a>
+                <a href="/saved-papers" class="btn btn-outline">🗂 My Library</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-label">Abstract</div>
+            <p class="abstract-text">{{ paper.abstract }}</p>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-title">✨ Recommended Papers</div>
+                {% for rec in recommendations %}
+                <div class="rec-item">
+                    <a href="/paper/{{ rec.id }}" class="rec-link">{{ rec.title }}</a>
+                    <div class="rec-meta">arxiv:{{ rec.id }}</div>
+                </div>
+                {% else %}
+                <p style="font-size:13px; color:var(--muted);">No recommendations yet.</p>
+                {% endfor %}
+            </div>
+        </aside>
+    </div>
 </body>
 
 </html>

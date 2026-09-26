@@ -1,47 +1,412 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Search Papers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Papers — ResearchAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0D0F1A;
+            --surface: #141728;
+            --panel: #1C2140;
+            --accent: #6C63FF;
+            --accent-2: #A78BFA;
+            --text: #E8EAF6;
+            --muted: #8892B0;
+            --border: #252B4A;
+            --radius: 12px;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            background: var(--ink);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .orb {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(108, 99, 255, 0.14) 0%, transparent 70%);
+        }
+
+        /* Nav */
+        nav {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 18px 48px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(13, 15, 26, 0.9);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            text-decoration: none;
+            margin-right: auto;
+        }
+
+        .nav-brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .nav-brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .nav-link {
+            font-size: 14px;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--text);
+            background: var(--panel);
+        }
+
+        .nav-link.active {
+            color: var(--accent-2);
+        }
+
+        /* Search hero */
+        .search-hero {
+            position: relative;
+            z-index: 1;
+            padding: 56px 48px 40px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .search-eyebrow {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .search-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 28px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+        }
+
+        .search-icon {
+            padding: 0 18px;
+            color: var(--muted);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 16px 0;
+            font-size: 16px;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-input::placeholder {
+            color: #3A4060;
+        }
+
+        .search-btn {
+            padding: 12px 28px;
+            margin: 6px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Space Grotesk', sans-serif;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .search-btn:hover {
+            opacity: 0.88;
+        }
+
+        .search-hints {
+            display: flex;
+            gap: 8px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hint-chip {
+            padding: 5px 12px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--muted);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .hint-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent-2);
+        }
+
+        /* Results */
+        .results-section {
+            position: relative;
+            z-index: 1;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 48px 80px;
+        }
+
+        .results-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .results-count {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .results-count span {
+            color: var(--accent-2);
+            font-weight: 500;
+        }
+
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 16px;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .paper-card:hover {
+            border-color: rgba(108, 99, 255, 0.4);
+            transform: translateX(3px);
+        }
+
+        .paper-card:hover::after {
+            opacity: 1;
+        }
+
+        .paper-category {
+            display: inline-block;
+            padding: 3px 10px;
+            margin-bottom: 10px;
+            background: rgba(108, 99, 255, 0.12);
+            border-radius: 20px;
+            font-size: 11px;
+            color: var(--accent-2);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .paper-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .paper-title a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .paper-title a:hover {
+            color: var(--accent-2);
+        }
+
+        .paper-abstract {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .paper-footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        .paper-meta {
+            font-size: 12px;
+            color: #4A5278;
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 80px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            opacity: 0.5;
+        }
+
+        .empty-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .empty-sub {
+            font-size: 14px;
+            color: #3A4060;
+            max-width: 320px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 
 <body>
-
-    <h2>Search Research Papers</h2>
-
-    <form action="/search" method="GET">
-
-        <input type="text" name="q" value="{{ query }}" placeholder="Search papers...">
-
-        <button type="submit">
-            Search
-        </button>
-
-    </form>
-
-    <hr>
-
-    {% for paper in papers %}
-
-    <h3>
-        <a href="/paper/{{ paper.id }}">
-            {{ paper.title }}
+    <div class="orb"></div>
+    <nav>
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-brand-icon">🔬</div>
+            <span class="nav-brand-name">ResearchAI</span>
         </a>
-    </h3>
+        <a href="/search" class="nav-link active">Search</a>
+        <a href="/ask" class="nav-link">Ask AI</a>
+        <a href="/saved-papers" class="nav-link">Saved</a>
+        <a href="/history" class="nav-link">History</a>
+    </nav>
 
-    <p>
-        <strong>Category:</strong>
-        {{ paper.categories }}
-    </p>
+    <div class="search-hero">
+        <div class="search-eyebrow">Paper Search</div>
+        <h1 class="search-title">Find research that matters</h1>
+        <form action="/search" method="GET">
+            <div class="search-box">
+                <div class="search-icon">🔍</div>
+                <input class="search-input" type="text" name="q" value="{{ query }}"
+                    placeholder="Search by topic, author, keyword, or abstract..." autofocus>
+                <button type="submit" class="search-btn">Search</button>
+            </div>
+        </form>
+        <div class="search-hints">
+            <span class="hint-chip">transformer architectures</span>
+            <span class="hint-chip">federated learning</span>
+            <span class="hint-chip">graph neural networks</span>
+            <span class="hint-chip">RLHF</span>
+            <span class="hint-chip">diffusion models</span>
+        </div>
+    </div>
 
-    <p>
-        {{ paper.abstract[:300] }}...
-    </p>
-
-    <hr>
-
-    {% endfor %}
-
+    <div class="results-section">
+        {% if papers %}
+        <div class="results-header">
+            <div class="results-count">Showing results for <span>"{{ query }}"</span></div>
+        </div>
+        {% for paper in papers %}
+        <div class="paper-card">
+            <div class="paper-category">{{ paper.categories }}</div>
+            <div class="paper-title"><a href="/paper/{{ paper.id }}">{{ paper.title }}</a></div>
+            <div class="paper-abstract">{{ paper.abstract[:300] }}…</div>
+            <div class="paper-footer">
+                <span class="paper-meta">arxiv:{{ paper.id }}</span>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-icon">📡</div>
+            <div class="empty-title">Search the literature</div>
+            <div class="empty-sub">Enter a topic, keyword, or question above to explore millions of research papers.
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </body>
 
 </html>

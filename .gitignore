@@ -5,3 +5,12 @@ __pycache__/
 embeddings/paper_embeddings.npy
 embeddings/papers.index
 embeddings/paper_ids.pkl
+# Dataset
+datasets/
+
+# add these:
+.vscode/
+.idea/
+*.pyc
+instance/
+.DS_Store

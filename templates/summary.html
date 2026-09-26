@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ paper.title }} — Summary — ResearchAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --ink: #0D0F1A; --surface: #141728; --panel: #1C2140;
+            --accent: #6C63FF; --accent-2: #A78BFA;
+            --text: #E8EAF6; --muted: #8892B0; --border: #252B4A; --radius: 12px;
+        }
+        html, body { min-height: 100vh; background: var(--ink); color: var(--text); font-family: 'Inter', sans-serif; }
+        nav { display: flex; align-items: center; gap: 24px; padding: 18px 48px; border-bottom: 1px solid var(--border); background: rgba(13,15,26,0.9); }
+        .nav-brand { display: flex; align-items: center; gap: 9px; text-decoration: none; margin-right: auto; }
+        .nav-brand-icon { width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: flex; align-items: center; justify-content: center; font-size: 15px; }
+        .nav-brand-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 16px; }
+        .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; }
+        .nav-back:hover { color: var(--text); }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 48px 80px; }
+        .page-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+        .summary-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; white-space: pre-wrap; line-height: 1.7; font-size: 15px; color: #C0C8E0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/dashboard" class="nav-brand">
+            <div class="nav-brand-icon">🔬</div>
+            <span class="nav-brand-name">ResearchAI</span>
+        </a>
+        <a href="/paper/{{ paper.id }}" class="nav-back">← Back to Paper</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">{{ paper.title }}</h1>
+        <div class="summary-panel">{{ summary }}</div>
+    </div>
+</body>
+</html>
