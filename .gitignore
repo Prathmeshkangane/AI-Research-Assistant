@@ -1,16 +1,12 @@
 venv/
 __pycache__/
+*.pyc
 .env
 
-embeddings/paper_embeddings.npy
-embeddings/papers.index
-embeddings/paper_ids.pkl
 # Dataset
 datasets/
-
-# add these:
+database/
 .vscode/
 .idea/
-*.pyc
 instance/
 .DS_Store
