@@ -3,6 +3,7 @@ from flask import session
 from flask import redirect
 
 from models import db
+from models.paper import Paper
 from models.saved_paper import SavedPaper
 
 saved_bp = Blueprint(
@@ -15,6 +16,9 @@ def save_paper(paper_id):
 
     if "user_id" not in session:
         return redirect("/login")
+
+    # FIX: unknown paper ids now give a 404 instead of a foreign-key 500 error
+    Paper.query.get_or_404(paper_id)
 
     existing = SavedPaper.query.filter_by(
         user_id=session["user_id"],

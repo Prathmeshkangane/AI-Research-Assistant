@@ -1,0 +1,848 @@
+[
+  {
+    "query": "How does present experimental uncertainty constrain electroweak effective field theory parameters?",
+    "paper_id": "0705.2277",
+    "title": "Constraints on the electroweak chiral Lagrangian from the precision data",
+    "style": "legacy"
+  },
+  {
+    "query": "What is the asymptotic behavior of unbounded solutions to biharmonic equations with exponential terms?",
+    "paper_id": "0706.0615",
+    "title": "Asymptotic behavior of a fourth order mean field equation with Dirichlet\n  boundary condition",
+    "style": "legacy"
+  },
+  {
+    "query": "What is the role of perturbed strategies in quantum game theory?",
+    "paper_id": "0705.1083",
+    "title": "Analysis of trembling hand perfect equilibria in quantum games",
+    "style": "legacy"
+  },
+  {
+    "query": "How does QGP viscosity relate to elliptic flow measurements at RHIC?",
+    "paper_id": "0704.3553",
+    "title": "The centrality dependence of elliptic flow, the hydrodynamic limit, and\n  the viscosity of hot QCD",
+    "style": "legacy"
+  },
+  {
+    "query": "Which string theory models, with dilaton, yield stable dark energy solutions from curvature corrections?",
+    "paper_id": "0705.1211",
+    "title": "Dark energy generated from a (super)string effective action with higher\n  order curvature corrections and a dynamical dilaton",
+    "style": "legacy"
+  },
+  {
+    "query": "What methods exist for high-capacity storage of quantum light's entangled features for networks?",
+    "paper_id": "0704.1737",
+    "title": "Quantum memory for images - a quantum hologram",
+    "style": "legacy"
+  },
+  {
+    "query": "What are the properties of BSA-polymer complexes for gastrointestinal delivery?",
+    "paper_id": "0705.3707",
+    "title": "Characterization of the Soluble Nanoparticles Formed through Coulombic\n  Interaction of Bovine Serum Albumin with Anionic Graft Copolymers at Low pH",
+    "style": "legacy"
+  },
+  {
+    "query": "How to characterize spectra of convolution operators on groups using commutator methods?",
+    "paper_id": "0704.1102",
+    "title": "Spectral analysis for convolution operators on locally compact groups",
+    "style": "legacy"
+  },
+  {
+    "query": "Does a resource trade-off exist between data and auxiliary qubits for MBQC?",
+    "paper_id": "0704.0202",
+    "title": "Towards Minimal Resources of Measurement-based Quantum Computation",
+    "style": "legacy"
+  },
+  {
+    "query": "How is Supernova 1987A's X-ray emission changing due to shock interaction?",
+    "paper_id": "0704.0209",
+    "title": "Chandra Observations of Supernova 1987A",
+    "style": "legacy"
+  },
+  {
+    "query": "What is recent research on variable stars, stellar populations, or origin of NGC 2419?",
+    "paper_id": "0705.0966",
+    "title": "On the remote Galactic globular cluster NGC 2419",
+    "style": "legacy"
+  },
+  {
+    "query": "How does Lorentz symmetry violation lead to massless gauge fields?",
+    "paper_id": "0704.0553",
+    "title": "Spontaneous Lorentz Violation: Non-Abelian Gauge Fields as\n  Pseudo-Goldstone Vector Bosons",
+    "style": "legacy"
+  },
+  {
+    "query": "How do curve moduli automorphisms connect to fundamental groups in p-adic anabelian geometry?",
+    "paper_id": "0706.0859",
+    "title": "Profinite complexes of curves, their automorphisms and anabelian\n  properties of moduli stacks of curves",
+    "style": "legacy"
+  },
+  {
+    "query": "How do turbulence and random growth affect plankton community spatial patterns?",
+    "paper_id": "0705.3195",
+    "title": "Stochastic population dynamics in turbulent fields",
+    "style": "legacy"
+  },
+  {
+    "query": "How do boundary conditions' renormalization group flow impact vacuum energy and stability in quantum field theory?",
+    "paper_id": "0704.1084",
+    "title": "Vacuum Energy and Renormalization on the Edge",
+    "style": "legacy"
+  },
+  {
+    "query": "How is the Landau pole screened nonperturbatively in high temperature Yang-Mills theory?",
+    "paper_id": "0704.2526",
+    "title": "Nonperturbative screening of the Landau pole",
+    "style": "legacy"
+  },
+  {
+    "query": "How do outflows create maser emission in proto-planetary nebulae?",
+    "paper_id": "0706.0836",
+    "title": "EVN observations of an OH maser burst in OH17.7-2.0",
+    "style": "legacy"
+  },
+  {
+    "query": "What are the late time behaviors of phantom cosmology in LQC and braneworld models?",
+    "paper_id": "0704.3606",
+    "title": "Type I singularities and the Phantom Menace",
+    "style": "legacy"
+  },
+  {
+    "query": "How are Lie group integrators used for rigid body stochastic simulations?",
+    "paper_id": "0704.0022",
+    "title": "Stochastic Lie group integrators",
+    "style": "legacy"
+  },
+  {
+    "query": "How do Gauss-Bonnet higher-dimensional models and bulk matter explain cosmic acceleration?",
+    "paper_id": "0704.0666",
+    "title": "String inspired explanation for the super-acceleration of our universe",
+    "style": "legacy"
+  },
+  {
+    "query": "How do fluid rheological properties influence EHL film thickness and traction?",
+    "paper_id": "0704.1798",
+    "title": "A unified shear-thinning treatment of both film thickness and traction\n  in EHD",
+    "style": "legacy"
+  },
+  {
+    "query": "ANN vs SVM water forecasting",
+    "paper_id": "0705.0969",
+    "title": "Artificial Neural Networks and Support Vector Machines for Water Demand\n  Time Series Forecasting",
+    "style": "keyword"
+  },
+  {
+    "query": "Which machine learning approach works better for predicting municipal fluid consumption rates?",
+    "paper_id": "0705.0969",
+    "title": "Artificial Neural Networks and Support Vector Machines for Water Demand\n  Time Series Forecasting",
+    "style": "paraphrase"
+  },
+  {
+    "query": "bent crystal radiation shield",
+    "paper_id": "0705.1202",
+    "title": "Deflection of High-Energy Cosmic Radiation Ions using a Bent Crystal\n  Shield",
+    "style": "keyword"
+  },
+  {
+    "query": "How can lattice structures protect vehicles in space from high energy cosmic particle impacts?",
+    "paper_id": "0705.1202",
+    "title": "Deflection of High-Energy Cosmic Radiation Ions using a Bent Crystal\n  Shield",
+    "style": "paraphrase"
+  },
+  {
+    "query": "graphene landau levels conductivity",
+    "paper_id": "0705.3783",
+    "title": "Magneto-optical conductivity in Graphene",
+    "style": "keyword"
+  },
+  {
+    "query": "What happens to the optical absorption peaks in carbon honeycomb sheets under strong magnetic fields?",
+    "paper_id": "0705.3783",
+    "title": "Magneto-optical conductivity in Graphene",
+    "style": "paraphrase"
+  },
+  {
+    "query": "SU2 monopoles spectral curves",
+    "paper_id": "0704.3939",
+    "title": "Monopoles, Curves and Ramanujan",
+    "style": "keyword"
+  },
+  {
+    "query": "How can number theory and specific mathematical identities help solve constraints for charge three gauge solutions?",
+    "paper_id": "0704.3939",
+    "title": "Monopoles, Curves and Ramanujan",
+    "style": "paraphrase"
+  },
+  {
+    "query": "hyperbolic groups weak amenability",
+    "paper_id": "0704.1635",
+    "title": "Weak Amenability of Hyperbolic Groups",
+    "style": "keyword"
+  },
+  {
+    "query": "Do negatively curved geometric spaces satisfy certain approximation properties regarding Schur multipliers?",
+    "paper_id": "0704.1635",
+    "title": "Weak Amenability of Hyperbolic Groups",
+    "style": "paraphrase"
+  },
+  {
+    "query": "completely monotonic functions Dagum",
+    "paper_id": "0705.0456",
+    "title": "The Dagum family of isotropic correlation functions",
+    "style": "keyword"
+  },
+  {
+    "query": "For what parameter ranges does this specific two-parameter function generate valid isotropic spatial correlation structures?",
+    "paper_id": "0705.0456",
+    "title": "The Dagum family of isotropic correlation functions",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Waldhausen algebraic K-theory nil-terms",
+    "paper_id": "0705.0930",
+    "title": "The \"fundamental theorem\" for the algebraic K-theory of spaces. III. the\n  nil-term",
+    "style": "keyword"
+  },
+  {
+    "query": "How do we compute the reduced algebraic invariants for categories featuring homotopically trivial self-maps?",
+    "paper_id": "0705.0930",
+    "title": "The \"fundamental theorem\" for the algebraic K-theory of spaces. III. the\n  nil-term",
+    "style": "paraphrase"
+  },
+  {
+    "query": "planets in binary stars",
+    "paper_id": "0705.3173",
+    "title": "Probing the Impact of Stellar Duplicity on Planet Occurrence with\n  Spectroscopic and Imaging Observations",
+    "style": "keyword"
+  },
+  {
+    "query": "How frequently do exoplanets orbit stars that belong to close stellar pairs?",
+    "paper_id": "0705.3173",
+    "title": "Probing the Impact of Stellar Duplicity on Planet Occurrence with\n  Spectroscopic and Imaging Observations",
+    "style": "paraphrase"
+  },
+  {
+    "query": "fuzzy logic transformer bushing diagnosis",
+    "paper_id": "0705.2305",
+    "title": "Fuzzy and Multilayer Perceptron for Evaluation of HV Bushings",
+    "style": "keyword"
+  },
+  {
+    "query": "Can soft computing models successfully evaluate insulation health using dissolved oil testing standards?",
+    "paper_id": "0705.2305",
+    "title": "Fuzzy and Multilayer Perceptron for Evaluation of HV Bushings",
+    "style": "paraphrase"
+  },
+  {
+    "query": "quantum Knizhnik-Zamolodchikov equations XXZ chain",
+    "paper_id": "0704.3542",
+    "title": "Polynomial solutions of qKZ equation and ground state of XXZ spin chain\n  at Delta = -1/2",
+    "style": "keyword"
+  },
+  {
+    "query": "What integral expressions represent the ground state eigenvectors for specific six-vertex lattice models?",
+    "paper_id": "0704.3542",
+    "title": "Polynomial solutions of qKZ equation and ground state of XXZ spin chain\n  at Delta = -1/2",
+    "style": "paraphrase"
+  },
+  {
+    "query": "translationally invariant lattice ground states",
+    "paper_id": "0704.3432",
+    "title": "Quantum simulators, continuous-time automata, and translationally\n  invariant systems",
+    "style": "keyword"
+  },
+  {
+    "query": "Can a uniform one-dimensional array of identical particles perform universal computations?",
+    "paper_id": "0704.3432",
+    "title": "Quantum simulators, continuous-time automata, and translationally\n  invariant systems",
+    "style": "paraphrase"
+  },
+  {
+    "query": "string theory cosmology wave function",
+    "paper_id": "0704.1996",
+    "title": "A Wave-function for Stringy Universes",
+    "style": "keyword"
+  },
+  {
+    "query": "How do we calculate probability amplitudes for evolving cosmological geometries in string theory?",
+    "paper_id": "0704.1996",
+    "title": "A Wave-function for Stringy Universes",
+    "style": "paraphrase"
+  },
+  {
+    "query": "photon correlation spectroscopy liquid sulphur",
+    "paper_id": "0706.0170",
+    "title": "On the origin of the $\\lambda$-transition in liquid Sulphur",
+    "style": "keyword"
+  },
+  {
+    "query": "Why does melted sulfur experience such massive viscosity shifts near specific thermal points?",
+    "paper_id": "0706.0170",
+    "title": "On the origin of the $\\lambda$-transition in liquid Sulphur",
+    "style": "paraphrase"
+  },
+  {
+    "query": "minimal tau approximation dynamo theory",
+    "paper_id": "0705.3508",
+    "title": "Simulations of the anisotropic kinetic and magnetic alpha effects",
+    "style": "keyword"
+  },
+  {
+    "query": "How does magnetic feedback alter turbulence relaxation times in fluid dynamo models?",
+    "paper_id": "0705.3508",
+    "title": "Simulations of the anisotropic kinetic and magnetic alpha effects",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Kennicutt Schmidt law magnetic regulation",
+    "paper_id": "0705.0634",
+    "title": "Formation of OB Associations in Galaxies",
+    "style": "keyword"
+  },
+  {
+    "query": "What magnetic mechanisms control birth rates and spatial patterns of massive star clusters?",
+    "paper_id": "0705.0634",
+    "title": "Formation of OB Associations in Galaxies",
+    "style": "paraphrase"
+  },
+  {
+    "query": "kinetostatic performance index serial manipulators",
+    "paper_id": "0705.1150",
+    "title": "On the Kinetostatic Optimization of Revolute-Coupled Planar Manipulators",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we measure and optimize the motion capabilities of robotic arms using Jacobian matrices?",
+    "paper_id": "0705.1150",
+    "title": "On the Kinetostatic Optimization of Revolute-Coupled Planar Manipulators",
+    "style": "paraphrase"
+  },
+  {
+    "query": "GiBUU transport model heavy ion collisions",
+    "paper_id": "0704.1785",
+    "title": "Three-body collisions in Boltzmann-Uehling-Uhlenbeck theory",
+    "style": "keyword"
+  },
+  {
+    "query": "What happens during high-energy atomic nuclei impacts according to updated microscopic simulations?",
+    "paper_id": "0704.1785",
+    "title": "Three-body collisions in Boltzmann-Uehling-Uhlenbeck theory",
+    "style": "paraphrase"
+  },
+  {
+    "query": "land cover prediction spatial modeling",
+    "paper_id": "0705.0304",
+    "title": "Mod\\'elisations prospectives de l'occupation du sol. Le cas d'une\n  montagne m\\'editerran\\'eenne",
+    "style": "keyword"
+  },
+  {
+    "query": "How accurately do neural networks and geographic information systems forecast vegetation changes in rugged terrain?",
+    "paper_id": "0705.0304",
+    "title": "Mod\\'elisations prospectives de l'occupation du sol. Le cas d'une\n  montagne m\\'editerran\\'eenne",
+    "style": "paraphrase"
+  },
+  {
+    "query": "solar chromosphere millimeter observations ALMA",
+    "paper_id": "0704.0023",
+    "title": "ALMA as the ideal probe of the solar chromosphere",
+    "style": "keyword"
+  },
+  {
+    "query": "Can radio telescope frequencies reveal the thermal fluctuations and structural behavior of our star's outer atmospheric layer?",
+    "paper_id": "0704.0023",
+    "title": "ALMA as the ideal probe of the solar chromosphere",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Delta Sobolev orthogonal polynomials Meixner",
+    "paper_id": "0706.0551",
+    "title": "A generating function for non-standard orthogonal polynomials involving\n  differences: the Meixner case",
+    "style": "keyword"
+  },
+  {
+    "query": "What function generates specific sequences of discrete polynomials tied to Pascal probability distributions?",
+    "paper_id": "0706.0551",
+    "title": "A generating function for non-standard orthogonal polynomials involving\n  differences: the Meixner case",
+    "style": "paraphrase"
+  },
+  {
+    "query": "geometric quantum mechanics hilbert manifold",
+    "paper_id": "0704.3306",
+    "title": "Quantum mechanics on Hilbert manifolds: The principle of functional\n  relativity",
+    "style": "keyword"
+  },
+  {
+    "query": "How can quantum mechanics be reformulated using differential geometry and functional equations on manifolds?",
+    "paper_id": "0704.3306",
+    "title": "Quantum mechanics on Hilbert manifolds: The principle of functional\n  relativity",
+    "style": "paraphrase"
+  },
+  {
+    "query": "game semantics lambda mu calculus",
+    "paper_id": "0705.4226",
+    "title": "Second-Order Type Isomorphisms Through Game Semantics",
+    "style": "keyword"
+  },
+  {
+    "query": "Can interactive game models help determine type equivalences in classical polymorphic programming languages?",
+    "paper_id": "0705.4226",
+    "title": "Second-Order Type Isomorphisms Through Game Semantics",
+    "style": "paraphrase"
+  },
+  {
+    "query": "fokker planck motor protein concentration",
+    "paper_id": "0705.2878",
+    "title": "Asymmetric potentials and motor effect: a large deviation approach",
+    "style": "keyword"
+  },
+  {
+    "query": "What mathematical mechanisms explain how molecular motors aggregate via asymmetric potential drift diffusion models?",
+    "paper_id": "0705.2878",
+    "title": "Asymmetric potentials and motor effect: a large deviation approach",
+    "style": "paraphrase"
+  },
+  {
+    "query": "ultrafast dynamics thallium cuprate superconductor",
+    "paper_id": "0705.1724",
+    "title": "Observation of Competing Order in a High-$T_{c}$ Superconductor with\n  Femtosecond Optical Pulses",
+    "style": "keyword"
+  },
+  {
+    "query": "How do laser pulses reveal competing energy gaps during relaxation in high temperature superconductors?",
+    "paper_id": "0705.1724",
+    "title": "Observation of Competing Order in a High-$T_{c}$ Superconductor with\n  Femtosecond Optical Pulses",
+    "style": "paraphrase"
+  },
+  {
+    "query": "isometric immersion compact riemannian manifold",
+    "paper_id": "0704.1807",
+    "title": "Polar actions on compact Euclidean hypersurfaces",
+    "style": "keyword"
+  },
+  {
+    "query": "What symmetry properties characterize hypersurfaces embedded squarely within Euclidean space?",
+    "paper_id": "0704.1807",
+    "title": "Polar actions on compact Euclidean hypersurfaces",
+    "style": "paraphrase"
+  },
+  {
+    "query": "sequential games partial orders",
+    "paper_id": "0705.3316",
+    "title": "Acyclicity of Preferences, Nash Equilibria, and Subgame Perfect\n  Equilibria: a Formal and Constructive Equivalence",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we define backward induction when player valuations follow arbitrary binary relations instead of numbers?",
+    "paper_id": "0705.3316",
+    "title": "Acyclicity of Preferences, Nash Equilibria, and Subgame Perfect\n  Equilibria: a Formal and Constructive Equivalence",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Dirac operators selfadjoint extensions",
+    "paper_id": "0706.1291",
+    "title": "Self-adjointness of Dirac operators via Hardy-Dirac inequalities",
+    "style": "keyword"
+  },
+  {
+    "query": "What mathematical techniques guarantee valid boundary conditions for relativistic quantum Hamiltonians with critical electrostatic potentials?",
+    "paper_id": "0706.1291",
+    "title": "Self-adjointness of Dirac operators via Hardy-Dirac inequalities",
+    "style": "paraphrase"
+  },
+  {
+    "query": "baby universe creation energy",
+    "paper_id": "0706.1233",
+    "title": "Universes out of almost empty space",
+    "style": "keyword"
+  },
+  {
+    "query": "Can topological spacetime branches detach spontaneously from flat backgrounds using negligible initial matter and field configurations?",
+    "paper_id": "0706.1233",
+    "title": "Universes out of almost empty space",
+    "style": "paraphrase"
+  },
+  {
+    "query": "magnetic flux tube stability",
+    "paper_id": "0704.3685",
+    "title": "Flow instabilities of magnetic flux tubes II. Longitudinal flow",
+    "style": "keyword"
+  },
+  {
+    "query": "Under what conditions do longitudinal currents trigger perturbations along stellar plasma conduits?",
+    "paper_id": "0704.3685",
+    "title": "Flow instabilities of magnetic flux tubes II. Longitudinal flow",
+    "style": "paraphrase"
+  },
+  {
+    "query": "carbon nanotube forest growth",
+    "paper_id": "0704.0915",
+    "title": "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+    "style": "keyword"
+  },
+  {
+    "query": "Which metallic substrate combinations accelerate the rapid synthesis of vertical cylindrical carbon lattices?",
+    "paper_id": "0704.0915",
+    "title": "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+    "style": "paraphrase"
+  },
+  {
+    "query": "direct photon fragmentation heavy ion",
+    "paper_id": "0705.0526",
+    "title": "Measuring Bremsstrahlung Photons in 200 GeV p+p Collisions",
+    "style": "keyword"
+  },
+  {
+    "query": "How can hadron-photon correlations isolate specific radiation components in nuclear collisions?",
+    "paper_id": "0705.0526",
+    "title": "Measuring Bremsstrahlung Photons in 200 GeV p+p Collisions",
+    "style": "paraphrase"
+  },
+  {
+    "query": "metal poor galaxies oxygen abundance",
+    "paper_id": "0704.3842",
+    "title": "MMT observations of new extremely metal-poor emission-line galaxies in\n  the Sloan Digital Sky Survey",
+    "style": "keyword"
+  },
+  {
+    "query": "What are the chemical compositions of extremely deficient star-forming systems found in sky surveys?",
+    "paper_id": "0704.3842",
+    "title": "MMT observations of new extremely metal-poor emission-line galaxies in\n  the Sloan Digital Sky Survey",
+    "style": "paraphrase"
+  },
+  {
+    "query": "high temperature superconductor current voltage heating",
+    "paper_id": "0705.0594",
+    "title": "Reply to comment on \"Essence of intrinsic tunnelling: Distinguishing\n  intrinsic features from artefacts",
+    "style": "keyword"
+  },
+  {
+    "query": "Does thermal dissipation explain the anomalous electrical characteristics observed in layered superconductors?",
+    "paper_id": "0705.0594",
+    "title": "Reply to comment on \"Essence of intrinsic tunnelling: Distinguishing\n  intrinsic features from artefacts",
+    "style": "paraphrase"
+  },
+  {
+    "query": "overdamped particles random potential dynamics",
+    "paper_id": "0704.3692",
+    "title": "Analytically solvable model of a driven system with quenched dichotomous\n  disorder",
+    "style": "keyword"
+  },
+  {
+    "query": "How does spatial disorder influence the temporal evolution of particle position probability distributions?",
+    "paper_id": "0704.3692",
+    "title": "Analytically solvable model of a driven system with quenched dichotomous\n  disorder",
+    "style": "paraphrase"
+  },
+  {
+    "query": "noncommutative tori elliptic curves representations",
+    "paper_id": "0705.1076",
+    "title": "Noncommutative tori and the Riemann-Hilbert correspondence",
+    "style": "keyword"
+  },
+  {
+    "query": "What algebraic structures connect deformation spaces with vector bundles and Tannakian categories?",
+    "paper_id": "0705.1076",
+    "title": "Noncommutative tori and the Riemann-Hilbert correspondence",
+    "style": "paraphrase"
+  },
+  {
+    "query": "elasticity of bead packings",
+    "paper_id": "0705.3198",
+    "title": "Internal states of model isotropic granular packings. III. Elastic\n  properties",
+    "style": "keyword"
+  },
+  {
+    "query": "How do contact networks and confining pressure affect the mechanical stiffness of simulated sphere aggregates?",
+    "paper_id": "0705.3198",
+    "title": "Internal states of model isotropic granular packings. III. Elastic\n  properties",
+    "style": "paraphrase"
+  },
+  {
+    "query": "GLAST and EXIST synergy",
+    "paper_id": "0705.4492",
+    "title": "Jets, Blazars and the EBL in the GLAST-EXIST Era",
+    "style": "keyword"
+  },
+  {
+    "query": "What new insights into active galactic nuclei and background radiation emerge from combining space telescope observations?",
+    "paper_id": "0705.4492",
+    "title": "Jets, Blazars and the EBL in the GLAST-EXIST Era",
+    "style": "paraphrase"
+  },
+  {
+    "query": "stable clustering in MANETs",
+    "paper_id": "0706.1080",
+    "title": "WACA: A Hierarchical Weighted Clustering Algorithm optimized for Mobile\n  Hybrid Networks",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we reduce unnecessary leader updates in dynamic wireless node networks experiencing constant movement?",
+    "paper_id": "0706.1080",
+    "title": "WACA: A Hierarchical Weighted Clustering Algorithm optimized for Mobile\n  Hybrid Networks",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Fokker-Planck plasma transport",
+    "paper_id": "0705.3737",
+    "title": "When can Fokker-Planck Equation describe anomalous or chaotic transport?",
+    "style": "keyword"
+  },
+  {
+    "query": "Why do random dynamical systems exhibit anomalous diffusion and particle propagation characteristics in magnetic confinement devices?",
+    "paper_id": "0705.3737",
+    "title": "When can Fokker-Planck Equation describe anomalous or chaotic transport?",
+    "style": "paraphrase"
+  },
+  {
+    "query": "blue stragglers NGC 1904",
+    "paper_id": "0704.1393",
+    "title": "A Panchromatic Study of the Globular Cluster NGC 1904. I: The Blue\n  Straggler Population",
+    "style": "keyword"
+  },
+  {
+    "query": "What do ultraviolet and optical stellar surveys reveal about the spatial arrangement of peculiar evolved stars inside globular clusters?",
+    "paper_id": "0704.1393",
+    "title": "A Panchromatic Study of the Globular Cluster NGC 1904. I: The Blue\n  Straggler Population",
+    "style": "paraphrase"
+  },
+  {
+    "query": "GOY shell model exact solutions",
+    "paper_id": "0705.3123",
+    "title": "Exact Periodic Solutions of Shells Models of Turbulence",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we find exact mathematical formulas for fluid turbulence models without external forces?",
+    "paper_id": "0705.3123",
+    "title": "Exact Periodic Solutions of Shells Models of Turbulence",
+    "style": "paraphrase"
+  },
+  {
+    "query": "cosmological singularities dynamical systems",
+    "paper_id": "0706.0463",
+    "title": "The Nature of Generic Cosmological Singularities",
+    "style": "keyword"
+  },
+  {
+    "query": "What mathematical tools help analyze the chaotic behavior of the universe near the beginning of time?",
+    "paper_id": "0706.0463",
+    "title": "The Nature of Generic Cosmological Singularities",
+    "style": "paraphrase"
+  },
+  {
+    "query": "eight dimensional quantum gravity",
+    "paper_id": "0704.2769",
+    "title": "Towards a Background Independent Quantum Gravity in Eight Dimensions",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we formulate a non-perturbative theory of spacetime geometry in higher dimensions?",
+    "paper_id": "0704.2769",
+    "title": "Towards a Background Independent Quantum Gravity in Eight Dimensions",
+    "style": "paraphrase"
+  },
+  {
+    "query": "strain hardening polymer glasses",
+    "paper_id": "0705.4301",
+    "title": "Strain Hardening in Polymer Glasses: Limitations of Network Models",
+    "style": "keyword"
+  },
+  {
+    "query": "Why do amorphous solid plastics become tougher and more resistant to deformation when stretched?",
+    "paper_id": "0705.4301",
+    "title": "Strain Hardening in Polymer Glasses: Limitations of Network Models",
+    "style": "paraphrase"
+  },
+  {
+    "query": "stochastic approximation semimartingale convergence",
+    "paper_id": "0705.1794",
+    "title": "Semimartingale Stochastic Approximation Procedures and Recursive\n  Estimation",
+    "style": "keyword"
+  },
+  {
+    "query": "What are the convergence properties of recursive algorithms driven by noisy stochastic processes?",
+    "paper_id": "0705.1794",
+    "title": "Semimartingale Stochastic Approximation Procedures and Recursive\n  Estimation",
+    "style": "paraphrase"
+  },
+  {
+    "query": "charge separation heavy ion collisions",
+    "paper_id": "0706.1026",
+    "title": "Charge separation induced by P-odd bubbles in QCD matter",
+    "style": "keyword"
+  },
+  {
+    "query": "How does rotation in nuclear reactions generate separated electric charges?",
+    "paper_id": "0706.1026",
+    "title": "Charge separation induced by P-odd bubbles in QCD matter",
+    "style": "paraphrase"
+  },
+  {
+    "query": "modal interpretations quantum mechanics history",
+    "paper_id": "0705.1660",
+    "title": "The Contextual Character of Modal Interpretations of Quantum Mechanics",
+    "style": "keyword"
+  },
+  {
+    "query": "What are the historical roots connecting early founders to modern state assignment theories?",
+    "paper_id": "0705.1660",
+    "title": "The Contextual Character of Modal Interpretations of Quantum Mechanics",
+    "style": "paraphrase"
+  },
+  {
+    "query": "CP violation precision tests",
+    "paper_id": "0704.0076",
+    "title": "CP violation in beauty decays",
+    "style": "keyword"
+  },
+  {
+    "query": "Where might we find evidence of physics beyond standard particle mixing frameworks?",
+    "paper_id": "0704.0076",
+    "title": "CP violation in beauty decays",
+    "style": "paraphrase"
+  },
+  {
+    "query": "entangling capacity non-unitary maps",
+    "paper_id": "0704.1042",
+    "title": "Entangling and disentangling capacities of nonlocal maps",
+    "style": "keyword"
+  },
+  {
+    "query": "How do general quantum channels affect bipartite correlation generation and destruction?",
+    "paper_id": "0704.1042",
+    "title": "Entangling and disentangling capacities of nonlocal maps",
+    "style": "paraphrase"
+  },
+  {
+    "query": "bimetric gravity energy momentum tensor",
+    "paper_id": "0704.0228",
+    "title": "Einstein vs Maxwell: Is gravitation a curvature of space, a field in\n  flat space, or both?",
+    "style": "keyword"
+  },
+  {
+    "query": "Can a flat spacetime framework solve black hole singularities and cosmological flatness?",
+    "paper_id": "0704.0228",
+    "title": "Einstein vs Maxwell: Is gravitation a curvature of space, a field in\n  flat space, or both?",
+    "style": "paraphrase"
+  },
+  {
+    "query": "Froggatt Nielsen CP violation",
+    "paper_id": "0704.0697",
+    "title": "CP violation due to multi Froggatt-Nielsen fields",
+    "style": "keyword"
+  },
+  {
+    "query": "How can charge conjugation parity violation be added to fermion mass generation frameworks?",
+    "paper_id": "0704.0697",
+    "title": "CP violation due to multi Froggatt-Nielsen fields",
+    "style": "paraphrase"
+  },
+  {
+    "query": "preferential attachment network search",
+    "paper_id": "0705.0580",
+    "title": "Effect of a static phase transition on searching dynamics",
+    "style": "keyword"
+  },
+  {
+    "query": "How do routing methods perform on spatial graphs exhibiting critical phase transitions?",
+    "paper_id": "0705.0580",
+    "title": "Effect of a static phase transition on searching dynamics",
+    "style": "paraphrase"
+  },
+  {
+    "query": "dark matter baryon scattering",
+    "paper_id": "0704.0794",
+    "title": "Constraints on the Interactions between Dark Matter and Baryons from the\n  X-ray Quantum Calorimetry Experiment",
+    "style": "keyword"
+  },
+  {
+    "query": "What constraints does space-based thermal sensor data place on hidden mass collisions with ordinary matter?",
+    "paper_id": "0704.0794",
+    "title": "Constraints on the Interactions between Dark Matter and Baryons from the\n  X-ray Quantum Calorimetry Experiment",
+    "style": "paraphrase"
+  },
+  {
+    "query": "directed polymer large deviations",
+    "paper_id": "0704.3758",
+    "title": "Large Deviations for Partition Functions of Directed Polymers and Some\n  Other Models in an IID Field",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we calculate the decay rates for rare fluctuation tails in random media partition functions?",
+    "paper_id": "0704.3758",
+    "title": "Large Deviations for Partition Functions of Directed Polymers and Some\n  Other Models in an IID Field",
+    "style": "paraphrase"
+  },
+  {
+    "query": "quasicrystal local growth algorithm",
+    "paper_id": "0704.0848",
+    "title": "Growing Perfect Decagonal Quasicrystals by Local Rules",
+    "style": "keyword"
+  },
+  {
+    "query": "Can non-periodic atomic structures be built using purely neighborhood-based assembly rules?",
+    "paper_id": "0704.0848",
+    "title": "Growing Perfect Decagonal Quasicrystals by Local Rules",
+    "style": "paraphrase"
+  },
+  {
+    "query": "relativistic magnetohydrodynamics numerical code",
+    "paper_id": "0704.3206",
+    "title": "ECHO: an Eulerian Conservative High Order scheme for general\n  relativistic magnetohydrodynamics and magnetodynamics",
+    "style": "keyword"
+  },
+  {
+    "query": "How can we numerically simulate plasma dynamics in curved spacetimes with high accuracy?",
+    "paper_id": "0704.3206",
+    "title": "ECHO: an Eulerian Conservative High Order scheme for general\n  relativistic magnetohydrodynamics and magnetodynamics",
+    "style": "paraphrase"
+  },
+  {
+    "query": "droplet bouncing vibration fluid",
+    "paper_id": "0705.4400",
+    "title": "About the lifetime of a bouncing droplet",
+    "style": "keyword"
+  },
+  {
+    "query": "What keeps a liquid globule floating on a vibrating pool instead of merging immediately?",
+    "paper_id": "0705.4400",
+    "title": "About the lifetime of a bouncing droplet",
+    "style": "paraphrase"
+  },
+  {
+    "query": "random polynomials zero probability",
+    "paper_id": "0704.2733",
+    "title": "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials",
+    "style": "keyword"
+  },
+  {
+    "query": "What is the chance that high degree random functions have no roots inside a circular region?",
+    "paper_id": "0704.2733",
+    "title": "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials",
+    "style": "paraphrase"
+  },
+  {
+    "query": "module composed graphs algorithm",
+    "paper_id": "0705.1521",
+    "title": "A note on module-composed graphs",
+    "style": "keyword"
+  },
+  {
+    "query": "How do we efficiently recognize networks built through sequential vertex additions with homogeneous neighborhoods?",
+    "paper_id": "0705.1521",
+    "title": "A note on module-composed graphs",
+    "style": "paraphrase"
+  },
+  {
+    "query": "nuclear modification factor LHC jet quenching",
+    "paper_id": "0705.4468",
+    "title": "Nuclear Suppression of Jets and R_AA at the LHC",
+    "style": "keyword"
+  },
+  {
+    "query": "How do we estimate high energy particle suppression in heavy ion collisions using radiative energy loss?",
+    "paper_id": "0705.4468",
+    "title": "Nuclear Suppression of Jets and R_AA at the LHC",
+    "style": "paraphrase"
+  }
+]

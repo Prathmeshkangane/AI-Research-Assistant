@@ -1,0 +1,730 @@
+[
+  {
+    "query": "What is the role of perturbed strategies in quantum game theory?",
+    "style": "legacy",
+    "gold_title": "Analysis of trembling hand perfect equilibria in quantum games",
+    "semantic_rank": 4,
+    "bm25_rank": 4,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Quantum-like Representation of Extensive Form Games: Wine Testing Game",
+      "Quantum Parrondo's game with random strategies",
+      "EGT through Quantum Mechanics & from Statistical Physics to Economics"
+    ]
+  },
+  {
+    "query": "What methods exist for high-capacity storage of quantum light's entangled features for networks?",
+    "style": "legacy",
+    "gold_title": "Quantum memory for images - a quantum hologram",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "Quantum storage on subradiant states in an extended atomic ensemble",
+      "Quantum memory for images - a quantum hologram",
+      "Efficient quantum cryptography network without entanglement and quantum\n  memory"
+    ]
+  },
+  {
+    "query": "How do outflows create maser emission in proto-planetary nebulae?",
+    "style": "legacy",
+    "gold_title": "EVN observations of an OH maser burst in OH17.7-2.0",
+    "semantic_rank": 11,
+    "bm25_rank": 3,
+    "hybrid_rank": 4,
+    "semantic_top3_titles": [
+      "The infrared environments of masers associated with star formation",
+      "Water vapor and silicon monoxide maser observations in the\n  protoplanetary nebula OH 231.8+4",
+      "Position-Velocity Diagrams for the Maser Emission coming from a\n  Keplerian Ring"
+    ]
+  },
+  {
+    "query": "What happens to the optical absorption peaks in carbon honeycomb sheets under strong magnetic fields?",
+    "style": "paraphrase",
+    "gold_title": "Magneto-optical conductivity in Graphene",
+    "semantic_rank": 2,
+    "bm25_rank": 3,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "Ground-state magneto-optical resonances in Cesium vapour confined in an\n  extremely thin cell",
+      "Magneto-optical conductivity in Graphene",
+      "Filling-Factor-Dependent Magnetophonon Resonance in Graphene"
+    ]
+  },
+  {
+    "query": "Do negatively curved geometric spaces satisfy certain approximation properties regarding Schur multipliers?",
+    "style": "paraphrase",
+    "gold_title": "Weak Amenability of Hyperbolic Groups",
+    "semantic_rank": 8,
+    "bm25_rank": 7,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Multivariable generalizations of the Schur class: positive kernel\n  characterization and transfer function realization",
+      "Extending the range of error estimates for radial approximation in Euclidean space and on spheres",
+      "Group-theoretic Description of Riemannian Spaces"
+    ]
+  },
+  {
+    "query": "For what parameter ranges does this specific two-parameter function generate valid isotropic spatial correlation structures?",
+    "style": "paraphrase",
+    "gold_title": "The Dagum family of isotropic correlation functions",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "Modeling Heterogeneous Materials via Two-Point Correlation Functions: I.\n  Basic Principles",
+      "The Dagum family of isotropic correlation functions",
+      "Synthesis of Taylor Phase Screens with Karhunen-Loeve Basis Functions"
+    ]
+  },
+  {
+    "query": "How do we compute the reduced algebraic invariants for categories featuring homotopically trivial self-maps?",
+    "style": "paraphrase",
+    "gold_title": "The \"fundamental theorem\" for the algebraic K-theory of spaces. III. the\n  nil-term",
+    "semantic_rank": 22,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "On the homology of two-dimensional elimination",
+      "Rational torus-equivariant homotopy I: calculating groups of stable maps",
+      "On classification and construction of algebraic Frobenius manifolds"
+    ]
+  },
+  {
+    "query": "planets in binary stars",
+    "style": "keyword",
+    "gold_title": "Probing the Impact of Stellar Duplicity on Planet Occurrence with\n  Spectroscopic and Imaging Observations",
+    "semantic_rank": 10,
+    "bm25_rank": 28,
+    "hybrid_rank": 14,
+    "semantic_top3_titles": [
+      "Observational Techniques for Detecting Planets in Binary Systems",
+      "Terrestrial Planet Formation in Binary Star Systems",
+      "Disks around Young Binary Stars"
+    ]
+  },
+  {
+    "query": "How frequently do exoplanets orbit stars that belong to close stellar pairs?",
+    "style": "paraphrase",
+    "gold_title": "Probing the Impact of Stellar Duplicity on Planet Occurrence with\n  Spectroscopic and Imaging Observations",
+    "semantic_rank": 7,
+    "bm25_rank": 34,
+    "hybrid_rank": 8,
+    "semantic_top3_titles": [
+      "Retired A Stars and Their Companions: Exoplanets Orbiting Three\n  Intermediate-Mass Subgiants",
+      "Shrinking binary and planetary orbits by Kozai cycles with tidal\n  friction",
+      "Ellipsoidal Oscillations Induced by Substellar Companions: A Prospect\n  for the Kepler Mission"
+    ]
+  },
+  {
+    "query": "Can soft computing models successfully evaluate insulation health using dissolved oil testing standards?",
+    "style": "paraphrase",
+    "gold_title": "Fuzzy and Multilayer Perceptron for Evaluation of HV Bushings",
+    "semantic_rank": 4,
+    "bm25_rank": 1,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "On-Line Condition Monitoring using Computational Intelligence",
+      "Computational Intelligence for Condition Monitoring",
+      "Condition Monitoring of HV Bushings in the Presence of Missing Data\n  Using Evolutionary Computing"
+    ]
+  },
+  {
+    "query": "What integral expressions represent the ground state eigenvectors for specific six-vertex lattice models?",
+    "style": "paraphrase",
+    "gold_title": "Polynomial solutions of qKZ equation and ground state of XXZ spin chain\n  at Delta = -1/2",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "The matrix product ansatz for the six-vertex model",
+      "Polynomial solutions of qKZ equation and ground state of XXZ spin chain\n  at Delta = -1/2",
+      "Functional Integral Representation of the Pauli-Fierz Model with Spin\n  1/2"
+    ]
+  },
+  {
+    "query": "Can a uniform one-dimensional array of identical particles perform universal computations?",
+    "style": "paraphrase",
+    "gold_title": "Quantum simulators, continuous-time automata, and translationally\n  invariant systems",
+    "semantic_rank": null,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "The power of quantum systems on a line",
+      "Fluctuations of the one-dimensional asymmetric exclusion process using\n  random matrix techniques",
+      "Intrinsically universal one-dimensional quantum cellular automata in two\n  flavours"
+    ]
+  },
+  {
+    "query": "How do we calculate probability amplitudes for evolving cosmological geometries in string theory?",
+    "style": "paraphrase",
+    "gold_title": "A Wave-function for Stringy Universes",
+    "semantic_rank": 21,
+    "bm25_rank": 9,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Stochastic approach of gravitational waves in presence of a decaying\n  cosmological parameter from a 5D vacuum theory of gravity",
+      "Testing String Theory with CMB",
+      "Velocity-Dependent Models for Non-Abelian/Entangled String Networks"
+    ]
+  },
+  {
+    "query": "How does magnetic feedback alter turbulence relaxation times in fluid dynamo models?",
+    "style": "paraphrase",
+    "gold_title": "Simulations of the anisotropic kinetic and magnetic alpha effects",
+    "semantic_rank": 2,
+    "bm25_rank": 2,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Fluctuation dynamo and turbulent induction at low magnetic Prandtl\n  numbers",
+      "Simulations of the anisotropic kinetic and magnetic alpha effects",
+      "Analysis of the Effect of a Mean Velocity Field on Mean Field Dynamo"
+    ]
+  },
+  {
+    "query": "Kennicutt Schmidt law magnetic regulation",
+    "style": "keyword",
+    "gold_title": "Formation of OB Associations in Galaxies",
+    "semantic_rank": null,
+    "bm25_rank": 2,
+    "hybrid_rank": 7,
+    "semantic_top3_titles": [
+      "The Solar-Interior Equation of State with the Path-Integral Formalism I.\n  Domain of Validity",
+      "Superconductor strip in a closed magnetic environment: exact analytic\n  representation of the critical state",
+      "On the MHD load and the MHD metage"
+    ]
+  },
+  {
+    "query": "What magnetic mechanisms control birth rates and spatial patterns of massive star clusters?",
+    "style": "paraphrase",
+    "gold_title": "Formation of OB Associations in Galaxies",
+    "semantic_rank": 28,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "Massive stars and globular cluster formation",
+      "Magnetorotational Collapse of Population III Stars",
+      "The magnetic fields of large Virgo Cluster spirals"
+    ]
+  },
+  {
+    "query": "What happens during high-energy atomic nuclei impacts according to updated microscopic simulations?",
+    "style": "paraphrase",
+    "gold_title": "Three-body collisions in Boltzmann-Uehling-Uhlenbeck theory",
+    "semantic_rank": null,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "A fully microscopical simulation of nuclear collisions by a new QMD\n  model",
+      "Nuclear enhancement of universal dynamics of high parton densities",
+      "Nucleon-induced fission cross-sections of tantalum and separated\n  tungsten isotopes and \"compound nucleus\" effect in intermediate energy region"
+    ]
+  },
+  {
+    "query": "Can radio telescope frequencies reveal the thermal fluctuations and structural behavior of our star's outer atmospheric layer?",
+    "style": "paraphrase",
+    "gold_title": "ALMA as the ideal probe of the solar chromosphere",
+    "semantic_rank": 3,
+    "bm25_rank": null,
+    "hybrid_rank": 12,
+    "semantic_top3_titles": [
+      "A high-frequency radio continuum study of massive young stellar objects",
+      "Statistical analyses of long-term variability of AGN at high radio\n  frequencies",
+      "ALMA as the ideal probe of the solar chromosphere"
+    ]
+  },
+  {
+    "query": "game semantics lambda mu calculus",
+    "style": "keyword",
+    "gold_title": "Second-Order Type Isomorphisms Through Game Semantics",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Resource modalities in game semantics",
+      "Second-Order Type Isomorphisms Through Game Semantics",
+      "Curry-style type Isomorphisms and Game Semantics"
+    ]
+  },
+  {
+    "query": "Can interactive game models help determine type equivalences in classical polymorphic programming languages?",
+    "style": "paraphrase",
+    "gold_title": "Second-Order Type Isomorphisms Through Game Semantics",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Curry-style type Isomorphisms and Game Semantics",
+      "Second-Order Type Isomorphisms Through Game Semantics",
+      "EF equivalent not isomorphic models"
+    ]
+  },
+  {
+    "query": "What mathematical techniques guarantee valid boundary conditions for relativistic quantum Hamiltonians with critical electrostatic potentials?",
+    "style": "paraphrase",
+    "gold_title": "Self-adjointness of Dirac operators via Hardy-Dirac inequalities",
+    "semantic_rank": 30,
+    "bm25_rank": 15,
+    "hybrid_rank": 7,
+    "semantic_top3_titles": [
+      "The Exact Boundary Condition to Solve the Schrodinger Equation of Many\n  Electron System",
+      "States of the Dirac equation in confining potentials",
+      "Boundary State for Dissipative Quantum Mechanics and Thirring Model"
+    ]
+  },
+  {
+    "query": "Can topological spacetime branches detach spontaneously from flat backgrounds using negligible initial matter and field configurations?",
+    "style": "paraphrase",
+    "gold_title": "Universes out of almost empty space",
+    "semantic_rank": 17,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Symmetries,Singularities and the De-Emergence of Space",
+      "Tree-Level Stability Without Spacetime Fermions: Novel Examples in\n  String Theory",
+      "Spontaneous Symmetry Breaking in the Bulk as a Localization Mechanism of\n  Fields on the Brane"
+    ]
+  },
+  {
+    "query": "carbon nanotube forest growth",
+    "style": "keyword",
+    "gold_title": "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+    "semantic_rank": 2,
+    "bm25_rank": 2,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Growth window and possible mechanism of millimeter-thick single-walled\n  carbon nanotube forests",
+      "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+      "On the Dynamical Ferromagnetic, Quantum Hall, and Relativistic Effects\n  on the Carbon Nanotubes Nucleation and Growth Mechanism"
+    ]
+  },
+  {
+    "query": "Which metallic substrate combinations accelerate the rapid synthesis of vertical cylindrical carbon lattices?",
+    "style": "paraphrase",
+    "gold_title": "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+    "semantic_rank": 2,
+    "bm25_rank": null,
+    "hybrid_rank": 12,
+    "semantic_top3_titles": [
+      "Growth window and possible mechanism of millimeter-thick single-walled\n  carbon nanotube forests",
+      "Millimeter-Thick Single-Walled Carbon Nanotube Forests: Hidden Role of\n  Catalyst Support",
+      "Electron-electron correlation in graphite"
+    ]
+  },
+  {
+    "query": "How can hadron-photon correlations isolate specific radiation components in nuclear collisions?",
+    "style": "paraphrase",
+    "gold_title": "Measuring Bremsstrahlung Photons in 200 GeV p+p Collisions",
+    "semantic_rank": 4,
+    "bm25_rank": 2,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Correlations with Photons in Heavy-Ion Collisions",
+      "A Parton-Based Description of Forward-Backward Correlation in pp\n  Collisions",
+      "PHENIX Measurement of High-$p_T$ Hadron-hadron and Photon-hadron\n  Azimuthal Correlations"
+    ]
+  },
+  {
+    "query": "What are the chemical compositions of extremely deficient star-forming systems found in sky surveys?",
+    "style": "paraphrase",
+    "gold_title": "MMT observations of new extremely metal-poor emission-line galaxies in\n  the Sloan Digital Sky Survey",
+    "semantic_rank": 20,
+    "bm25_rank": 2,
+    "hybrid_rank": 6,
+    "semantic_top3_titles": [
+      "Chemical Properties of Star Forming Dwarf Galaxies",
+      "Beryllium in Ultra-Lithium-Deficient Halo Stars - The Blue Straggler\n  Connection",
+      "A Hubble View of Star Forming Regions in the Magellanic Clouds"
+    ]
+  },
+  {
+    "query": "high temperature superconductor current voltage heating",
+    "style": "keyword",
+    "gold_title": "Reply to comment on \"Essence of intrinsic tunnelling: Distinguishing\n  intrinsic features from artefacts",
+    "semantic_rank": 8,
+    "bm25_rank": 5,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "The design of a very high-Q superconductor electromechanical clock",
+      "Universal temperature scaling of flux line pinning in high-temperature\n  superconducting thin films",
+      "Current - voltage characteristics of break junctions of high-$T_c$\n  superconductors"
+    ]
+  },
+  {
+    "query": "Does thermal dissipation explain the anomalous electrical characteristics observed in layered superconductors?",
+    "style": "paraphrase",
+    "gold_title": "Reply to comment on \"Essence of intrinsic tunnelling: Distinguishing\n  intrinsic features from artefacts",
+    "semantic_rank": 9,
+    "bm25_rank": null,
+    "hybrid_rank": 18,
+    "semantic_top3_titles": [
+      "Dissipation in Mesoscopic Superconductors with Ac Magnetic Fields",
+      "Anomalous thermopower and Nernst effect in $\\rm CeCoIn_5$:\n  entropy-current loss in precursor state",
+      "Theory of Thermal Conductivity in High-Tc Superconductors below Tc:\n  Comparison between Hole-Doped and Electron-Doped Systems"
+    ]
+  },
+  {
+    "query": "How does spatial disorder influence the temporal evolution of particle position probability distributions?",
+    "style": "paraphrase",
+    "gold_title": "Analytically solvable model of a driven system with quenched dichotomous\n  disorder",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "Position and velocity space diffusion of test particles in stochastic\n  electromagnetic fields",
+      "Analytically solvable model of a driven system with quenched dichotomous\n  disorder",
+      "Subdiffusion and weak ergodicity breaking in the presence of a reactive\n  boundary"
+    ]
+  },
+  {
+    "query": "What algebraic structures connect deformation spaces with vector bundles and Tannakian categories?",
+    "style": "paraphrase",
+    "gold_title": "Noncommutative tori and the Riemann-Hilbert correspondence",
+    "semantic_rank": null,
+    "bm25_rank": 3,
+    "hybrid_rank": 17,
+    "semantic_top3_titles": [
+      "Tannakian Categories attached to abelian Varieties",
+      "Differentiable and deformation type of algebraic surfaces, real and\n  symplectic structures",
+      "The Jumping Phenomenon of the Dimensions of Cohomology Groups of Tangent\n  Sheaf"
+    ]
+  },
+  {
+    "query": "How do contact networks and confining pressure affect the mechanical stiffness of simulated sphere aggregates?",
+    "style": "paraphrase",
+    "gold_title": "Internal states of model isotropic granular packings. III. Elastic\n  properties",
+    "semantic_rank": 3,
+    "bm25_rank": 2,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Internal states of model isotropic granular packings. II. Compression\n  and pressure cycles",
+      "Computer simulation of model cohesive powders: influence of assembling\n  procedure and contact laws on low consolidation states",
+      "Internal states of model isotropic granular packings. III. Elastic\n  properties"
+    ]
+  },
+  {
+    "query": "What new insights into active galactic nuclei and background radiation emerge from combining space telescope observations?",
+    "style": "paraphrase",
+    "gold_title": "Jets, Blazars and the EBL in the GLAST-EXIST Era",
+    "semantic_rank": 14,
+    "bm25_rank": null,
+    "hybrid_rank": 29,
+    "semantic_top3_titles": [
+      "A Close Look at Star Formation around Active Galactic Nuclei",
+      "The redshift-dependence of gamma-ray absorption in the environments of\n  strong-line AGN",
+      "Star-Formation in Low Radio Luminosity AGN from the Sloan Digital Sky\n  Survey"
+    ]
+  },
+  {
+    "query": "How can we reduce unnecessary leader updates in dynamic wireless node networks experiencing constant movement?",
+    "style": "paraphrase",
+    "gold_title": "WACA: A Hierarchical Weighted Clustering Algorithm optimized for Mobile\n  Hybrid Networks",
+    "semantic_rank": 6,
+    "bm25_rank": 37,
+    "hybrid_rank": 9,
+    "semantic_top3_titles": [
+      "Lifetime Improvement in Wireless Sensor Networks via Collaborative\n  Beamforming and Cooperative Transmission",
+      "Mixing navigation on networks",
+      "Lifetime Improvement of Wireless Sensor Networks by Collaborative\n  Beamforming and Cooperative Transmission"
+    ]
+  },
+  {
+    "query": "Why do random dynamical systems exhibit anomalous diffusion and particle propagation characteristics in magnetic confinement devices?",
+    "style": "paraphrase",
+    "gold_title": "When can Fokker-Planck Equation describe anomalous or chaotic transport?",
+    "semantic_rank": 2,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Position and velocity space diffusion of test particles in stochastic\n  electromagnetic fields",
+      "When can Fokker-Planck Equation describe anomalous or chaotic transport?",
+      "Anomalous Diffusion of particles with inertia in external potentials"
+    ]
+  },
+  {
+    "query": "What do ultraviolet and optical stellar surveys reveal about the spatial arrangement of peculiar evolved stars inside globular clusters?",
+    "style": "paraphrase",
+    "gold_title": "A Panchromatic Study of the Globular Cluster NGC 1904. I: The Blue\n  Straggler Population",
+    "semantic_rank": 32,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "The Formation of Globular Cluster Systems in Massive Elliptical\n  Galaxies: Globular Cluster Multimodality from Radial Variation of Stellar\n  Populations",
+      "An updated survey of globular clusters in M31. II Newly discovered\n  bright and remote clusters",
+      "Massive stars and globular cluster formation"
+    ]
+  },
+  {
+    "query": "How can we find exact mathematical formulas for fluid turbulence models without external forces?",
+    "style": "paraphrase",
+    "gold_title": "Exact Periodic Solutions of Shells Models of Turbulence",
+    "semantic_rank": 7,
+    "bm25_rank": 1,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "A Corrsin type approximation for Lagrangian fluid Turbulence",
+      "Universal Model of Finite-Reynolds Number Turbulent Flow in Channels and\n  Pipes",
+      "Fuzzy Fluid Mechanics in Three Dimensions"
+    ]
+  },
+  {
+    "query": "What mathematical tools help analyze the chaotic behavior of the universe near the beginning of time?",
+    "style": "paraphrase",
+    "gold_title": "The Nature of Generic Cosmological Singularities",
+    "semantic_rank": 27,
+    "bm25_rank": null,
+    "hybrid_rank": 48,
+    "semantic_top3_titles": [
+      "The dynamics of the early universe and the initial conditions for\n  inflation in a model with radiation and a Chaplygin gas",
+      "Cosmological applications of a wavelet analysis on the sphere",
+      "Chaos and complexity in astrophysics"
+    ]
+  },
+  {
+    "query": "How can we formulate a non-perturbative theory of spacetime geometry in higher dimensions?",
+    "style": "paraphrase",
+    "gold_title": "Towards a Background Independent Quantum Gravity in Eight Dimensions",
+    "semantic_rank": null,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "Nonlinear Perturbations and Conservation Laws on Curved Backgrounds in\n  GR and Other Metric Theories",
+      "4-Dimensional General Relativity from the instrinsic spatial geometry of\n  SO(3) Yang--Mills theory",
+      "(2+1)-Dimensional Quantum Gravity as the Continuum Limit of Causal\n  Dynamical Triangulations"
+    ]
+  },
+  {
+    "query": "Why do amorphous solid plastics become tougher and more resistant to deformation when stretched?",
+    "style": "paraphrase",
+    "gold_title": "Strain Hardening in Polymer Glasses: Limitations of Network Models",
+    "semantic_rank": 2,
+    "bm25_rank": null,
+    "hybrid_rank": 10,
+    "semantic_top3_titles": [
+      "Simulations of aging and plastic deformation in polymer glasses",
+      "Strain Hardening in Polymer Glasses: Limitations of Network Models",
+      "Plastic Response of a 2D Amorphous Solid to Quasi-Static Shear : II -\n  Dynamical Noise and Avalanches in a Mean Field Model"
+    ]
+  },
+  {
+    "query": "What are the convergence properties of recursive algorithms driven by noisy stochastic processes?",
+    "style": "paraphrase",
+    "gold_title": "Semimartingale Stochastic Approximation Procedures and Recursive\n  Estimation",
+    "semantic_rank": 4,
+    "bm25_rank": 1,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Almost sure convergence of randomly truncated stochastic algorithms\n  under verifiable conditions",
+      "Recursive Parameter Estimation: Convergence",
+      "Rate of Convergence in Recursive Parameter Estimation procedures"
+    ]
+  },
+  {
+    "query": "charge separation heavy ion collisions",
+    "style": "keyword",
+    "gold_title": "Charge separation induced by P-odd bubbles in QCD matter",
+    "semantic_rank": 2,
+    "bm25_rank": 3,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Core-Corona Separation in Ultra-Relativistic Heavy Ion Collisions",
+      "Charge separation induced by P-odd bubbles in QCD matter",
+      "Electron-Positron Pair Production in Relativistic Heavy Ion Collisions"
+    ]
+  },
+  {
+    "query": "What are the historical roots connecting early founders to modern state assignment theories?",
+    "style": "paraphrase",
+    "gold_title": "The Contextual Character of Modal Interpretations of Quantum Mechanics",
+    "semantic_rank": null,
+    "bm25_rank": 8,
+    "hybrid_rank": 20,
+    "semantic_top3_titles": [
+      "La controverse de 1874 entre Camille Jordan et Leopold Kronecker",
+      "L'identit\\'e alg\\'ebrique d'une pratique port\\'ee par la discussion sur\n  l'\\'equation \\`a l'aide de laquelle on d\\'etermine les in\\'egalit\\'es\n  s\\'eculaires des plan\\`etes (1766-1874)",
+      "Network statistics on early English Syntax: Structural criteria"
+    ]
+  },
+  {
+    "query": "Where might we find evidence of physics beyond standard particle mixing frameworks?",
+    "style": "paraphrase",
+    "gold_title": "CP violation in beauty decays",
+    "semantic_rank": null,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "Physics Beyond the Standard Model and Dark Matter",
+      "Implications of D^0-\\bar D^0 Mixing for New Physics",
+      "Probing non-standard decoherence effects with solar and KamLAND\n  neutrinos"
+    ]
+  },
+  {
+    "query": "How do general quantum channels affect bipartite correlation generation and destruction?",
+    "style": "paraphrase",
+    "gold_title": "Entangling and disentangling capacities of nonlocal maps",
+    "semantic_rank": null,
+    "bm25_rank": null,
+    "hybrid_rank": null,
+    "semantic_top3_titles": [
+      "Entanglement purification and quantum error correction",
+      "Is relaxation correlated in superconducting qubits?",
+      "Decoherence of Highly Mixed Macroscopic Quantum Superpositions"
+    ]
+  },
+  {
+    "query": "Can a flat spacetime framework solve black hole singularities and cosmological flatness?",
+    "style": "paraphrase",
+    "gold_title": "Einstein vs Maxwell: Is gravitation a curvature of space, a field in\n  flat space, or both?",
+    "semantic_rank": 3,
+    "bm25_rank": 32,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Unsuccessful cosmology with Modified Gravity Models",
+      "Global structure and physical interpretation of the Fonarev solution for\n  a scalar field with exponential potential",
+      "Einstein vs Maxwell: Is gravitation a curvature of space, a field in\n  flat space, or both?"
+    ]
+  },
+  {
+    "query": "How can charge conjugation parity violation be added to fermion mass generation frameworks?",
+    "style": "paraphrase",
+    "gold_title": "CP violation due to multi Froggatt-Nielsen fields",
+    "semantic_rank": 7,
+    "bm25_rank": 2,
+    "hybrid_rank": 1,
+    "semantic_top3_titles": [
+      "Testing the Standard Model by precision measurement of the weak charges\n  of quarks",
+      "Parity nonconservation in dielectronic recombination of multiply charged\n  ions",
+      "Quark Loop Contributions to Neutron, Deuteron, and Mercury EDMs from\n  Supersymmetry without R parity"
+    ]
+  },
+  {
+    "query": "preferential attachment network search",
+    "style": "keyword",
+    "gold_title": "Effect of a static phase transition on searching dynamics",
+    "semantic_rank": 24,
+    "bm25_rank": 4,
+    "hybrid_rank": 9,
+    "semantic_top3_titles": [
+      "Unifying Evolutionary and Network Dynamics",
+      "Network Growth with Preferential Attachment for High Indegree and Low\n  Outdegree",
+      "Local attachment in networks under churn"
+    ]
+  },
+  {
+    "query": "How do routing methods perform on spatial graphs exhibiting critical phase transitions?",
+    "style": "paraphrase",
+    "gold_title": "Effect of a static phase transition on searching dynamics",
+    "semantic_rank": 2,
+    "bm25_rank": null,
+    "hybrid_rank": 8,
+    "semantic_top3_titles": [
+      "Critical phenomena in complex networks",
+      "Effect of a static phase transition on searching dynamics",
+      "Phase Transitions in the Coloring of Random Graphs"
+    ]
+  },
+  {
+    "query": "What constraints does space-based thermal sensor data place on hidden mass collisions with ordinary matter?",
+    "style": "paraphrase",
+    "gold_title": "Constraints on the Interactions between Dark Matter and Baryons from the\n  X-ray Quantum Calorimetry Experiment",
+    "semantic_rank": 17,
+    "bm25_rank": 19,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Status and Promise of Particle Interferometry in Heavy-Ion Collisions",
+      "Towards Closing the Window on Strongly Interacting Dark Matter:\n  Far-Reaching Constraints from Earth's Heat Flow",
+      "Constraining Models of Neutrino Mass and Neutrino Interactions with the\n  Planck Satellite"
+    ]
+  },
+  {
+    "query": "Can non-periodic atomic structures be built using purely neighborhood-based assembly rules?",
+    "style": "paraphrase",
+    "gold_title": "Growing Perfect Decagonal Quasicrystals by Local Rules",
+    "semantic_rank": 3,
+    "bm25_rank": null,
+    "hybrid_rank": 8,
+    "semantic_top3_titles": [
+      "Tiling models for metadislocations in AlPdMn approximants",
+      "Photonic-crystal slabs with a triangular lattice of triangular holes\n  investigated using a guided-mode expansion method",
+      "Growing Perfect Decagonal Quasicrystals by Local Rules"
+    ]
+  },
+  {
+    "query": "How can we numerically simulate plasma dynamics in curved spacetimes with high accuracy?",
+    "style": "paraphrase",
+    "gold_title": "ECHO: an Eulerian Conservative High Order scheme for general\n  relativistic magnetohydrodynamics and magnetodynamics",
+    "semantic_rank": 4,
+    "bm25_rank": null,
+    "hybrid_rank": 8,
+    "semantic_top3_titles": [
+      "WHAM: A WENO-based general relativistic numerical scheme I:\n  Hydrodynamics",
+      "Comment on \"Electromagnetic Global Gyrokinetic Simulation of Shear\n  Alfven Wave Dynamics in Tokamak Plasmas\" [Phys. Plasmas 14, 042503 (2007)]",
+      "Simulation of Laser Propagation in a Plasma with a Frequency Wave Equation"
+    ]
+  },
+  {
+    "query": "What keeps a liquid globule floating on a vibrating pool instead of merging immediately?",
+    "style": "paraphrase",
+    "gold_title": "About the lifetime of a bouncing droplet",
+    "semantic_rank": 2,
+    "bm25_rank": null,
+    "hybrid_rank": 6,
+    "semantic_top3_titles": [
+      "Nearly spherical vesicles in an external flow",
+      "About the lifetime of a bouncing droplet",
+      "Shape instabilities in vesicles: a phase-field model"
+    ]
+  },
+  {
+    "query": "random polynomials zero probability",
+    "style": "keyword",
+    "gold_title": "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials",
+    "semantic_rank": 3,
+    "bm25_rank": 2,
+    "hybrid_rank": 3,
+    "semantic_top3_titles": [
+      "Statistics of the Number of Zero Crossings : from Random Polynomials to\n  Diffusion Equation",
+      "Distributions of Roots of Reduced Cubic Equations with Random\n  Coefficients",
+      "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials"
+    ]
+  },
+  {
+    "query": "What is the chance that high degree random functions have no roots inside a circular region?",
+    "style": "paraphrase",
+    "gold_title": "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials",
+    "semantic_rank": 2,
+    "bm25_rank": 2,
+    "hybrid_rank": 2,
+    "semantic_top3_titles": [
+      "Statistics of the Number of Zero Crossings : from Random Polynomials to\n  Diffusion Equation",
+      "The order of the decay of the hole probability for Gaussian random\n  SU(m+1) polynomials",
+      "Distributions of Roots of Reduced Cubic Equations with Random\n  Coefficients"
+    ]
+  },
+  {
+    "query": "How do we efficiently recognize networks built through sequential vertex additions with homogeneous neighborhoods?",
+    "style": "paraphrase",
+    "gold_title": "A note on module-composed graphs",
+    "semantic_rank": 4,
+    "bm25_rank": null,
+    "hybrid_rank": 9,
+    "semantic_top3_titles": [
+      "What are the Best Hierarchical Descriptors for Complex Networks?",
+      "Identifying network communities with a high resolution",
+      "Triple-loop networks with arbitrarily many minimum distance diagrams"
+    ]
+  },
+  {
+    "query": "How do we estimate high energy particle suppression in heavy ion collisions using radiative energy loss?",
+    "style": "paraphrase",
+    "gold_title": "Nuclear Suppression of Jets and R_AA at the LHC",
+    "semantic_rank": 7,
+    "bm25_rank": null,
+    "hybrid_rank": 26,
+    "semantic_top3_titles": [
+      "Radiative heavy quark energy loss in a dynamical QCD medium",
+      "Radiative jet energy loss in a three-dimensional hydrodynamical medium\n  and high $p_T$ azimuthal asymmetry of $\\pi_0$ suppression at mid and forward\n  rapidity at RHIC",
+      "Charged hadron R_AA as a function of p_T at the LHC"
+    ]
+  }
+]

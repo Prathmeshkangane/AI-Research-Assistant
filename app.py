@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from config import Config
 from models import db
@@ -42,6 +44,11 @@ def home():
 def login_page():
     return render_template("login.html")
 
+@app.route("/healthz")
+def healthz():
+    # cheap endpoint for Render / Docker health checks (does not touch the model or the database)
+    return "ok", 200
+
 @app.route("/dashboard")
 def dashboard():
 
@@ -59,4 +66,5 @@ def dashboard():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # debug only when you ask for it: FLASK_DEBUG=1 python app.py
+    app.run(debug=os.getenv("FLASK_DEBUG") == "1")

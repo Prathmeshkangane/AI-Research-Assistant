@@ -12,3 +12,5 @@ numpy
 bcrypt
 google-generativeai
 gunicorn==21.2.0
+cryptography
+faiss-cpu

@@ -1,14 +1,12 @@
-import google.generativeai as genai
-import os
-genai.configure(
-    api_key = os.getenv("GEMINI_API_KEY")
-)
+from services.llm import generate_text, FAILURE_MESSAGES
 
-model = genai.GenerativeModel(
-    "gemini-2.5-flash"
-)
+_cache = {}   # paper_id -> summary (resets on restart; move to a DB column later if you want it permanent)
+
 
 def summarize_paper(paper):
+
+    if paper.id in _cache:
+        return _cache[paper.id]
 
     prompt = f"""
     Summarize this research paper.
@@ -27,8 +25,8 @@ def summarize_paper(paper):
     4. Future Scope
     """
 
-    response = model.generate_content(
-        prompt
-    )
+    text = generate_text(prompt)
 
-    return response.text
+    if text not in FAILURE_MESSAGES:      # never cache an error message
+        _cache[paper.id] = text
+    return text

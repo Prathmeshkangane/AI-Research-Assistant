@@ -15,7 +15,13 @@ import numpy as np
 
 from sentence_transformers import SentenceTransformer
 
-from app import app
+from flask import Flask
+from config import Config
+from models import db
+
+app = Flask(__name__)
+app.config.from_object(Config)
+db.init_app(app)
 from models.paper import Paper
 
 # Create embeddings directory
@@ -29,6 +35,9 @@ print("Loading model...")
 model = SentenceTransformer(
     "all-MiniLM-L6-v2"
 )
+
+def clean(s):
+    return " ".join((s or "").split())
 
 with app.app_context():
 
@@ -45,14 +54,8 @@ with app.app_context():
 
     # Better semantic representation
     texts = [
-        f"""
-        Title: {paper.title}
-
-        Categories: {paper.categories}
-
-        Abstract: {paper.abstract}
-        """
-        for paper in papers
+    f"Title: {clean(paper.title)}. Categories: {clean(paper.categories)}. Abstract: {clean(paper.abstract)}"
+    for paper in papers
     ]
 
     print(

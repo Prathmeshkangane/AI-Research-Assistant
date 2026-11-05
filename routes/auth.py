@@ -19,15 +19,26 @@ auth_bp = Blueprint(
     __name__
 )
 
+MIN_PASSWORD_LENGTH = 8
+
+
 @auth_bp.route("/register", methods=["GET", "POST"])
 def register():
 
     if request.method == "GET":
         return render_template("register.html")
 
-    username = request.form["username"]
-    email = request.form["email"]
-    password = request.form["password"]
+    username = request.form.get("username", "").strip()
+    email = request.form.get("email", "").strip().lower()
+    password = request.form.get("password", "")
+
+    if not username or not email or not password:
+        flash("All fields are required")
+        return redirect("/register")
+
+    if len(password) < MIN_PASSWORD_LENGTH:
+        flash(f"Password must be at least {MIN_PASSWORD_LENGTH} characters")
+        return redirect("/register")
 
     existing_user = User.query.filter(
         (User.email == email) | (User.username == username)
@@ -67,25 +78,23 @@ def register():
 @auth_bp.route("/login", methods=["POST"])
 def login():
 
-    email = request.form["email"]
-    password = request.form["password"]
+    email = request.form.get("email", "").strip().lower()
+    password = request.form.get("password", "")
 
     user = User.query.filter_by(email=email).first()
 
-    if not user:
-        flash("User not found")
-        return redirect("/login")
-
-    if bcrypt.checkpw(
+    # FIX: one generic message, so attackers cannot discover which emails are registered
+    if not user or not bcrypt.checkpw(
         password.encode("utf-8"),
         user.password_hash.encode("utf-8")
     ):
-        session["user_id"] = user.id
-        session["username"] = user.username
-        return redirect("/dashboard")
+        flash("Invalid email or password")
+        return redirect("/login")
 
-    flash("Invalid password")
-    return redirect("/login")
+    session.clear()
+    session["user_id"] = user.id
+    session["username"] = user.username
+    return redirect("/dashboard")
 
 
 @auth_bp.route("/logout")

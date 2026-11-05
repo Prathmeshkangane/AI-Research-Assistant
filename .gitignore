@@ -1,12 +1,13 @@
 venv/
 __pycache__/
 *.pyc
-.env
-
-# Dataset
+.git/
+.env*
+env.yaml
 datasets/
 database/
 .vscode/
 .idea/
-instance/
-.DS_Store
+.env.compose
+ca.pem
+.env.local

@@ -1,21 +1,10 @@
-import google.generativeai as genai
-import os
+from services.llm import generate_text
 
-genai.configure(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
 
-model = genai.GenerativeModel(
-    "gemini-2.5-flash"
-)
-
-def compare_papers(
-    paper1,
-    paper2
-):
+def compare_papers(paper1, paper2):
 
     prompt = f"""
-    Compare these research papers.
+    Compare these research papers using only the abstracts below.
 
     Paper 1:
     Title:
@@ -36,11 +25,7 @@ def compare_papers(
     1. Similarities
     2. Differences
     3. Methodologies
-    4. Which paper appears stronger
+    4. Strengths and limitations of each (state that this is based on abstracts only)
     """
 
-    response = model.generate_content(
-        prompt
-    )
-
-    return response.text
+    return generate_text(prompt)

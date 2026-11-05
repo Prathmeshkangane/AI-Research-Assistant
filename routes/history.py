@@ -14,11 +14,6 @@ history_bp = Blueprint(
 @history_bp.route("/history")
 def history():
 
-    print(
-        "HISTORY SESSION:",
-        dict(session)
-    )
-
     if "user_id" not in session:
         return "Please login first"
 

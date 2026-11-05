@@ -1,0 +1,123 @@
+{
+  "overall": {
+    "n": 141,
+    "semantic": {
+      "Recall@1": 0.574,
+      "Recall@3": 0.73,
+      "Recall@5": 0.787,
+      "Recall@10": 0.816,
+      "MRR@10": 0.658
+    },
+    "bm25_baseline": {
+      "Recall@1": 0.539,
+      "Recall@3": 0.674,
+      "Recall@5": 0.716,
+      "Recall@10": 0.759,
+      "MRR@10": 0.615
+    },
+    "hybrid_rrf": {
+      "Recall@1": 0.539,
+      "Recall@3": 0.745,
+      "Recall@5": 0.78,
+      "Recall@10": 0.837,
+      "MRR@10": 0.644
+    }
+  },
+  "by_query_style": {
+    "keyword": {
+      "n": 60,
+      "semantic": {
+        "Recall@1": 0.767,
+        "Recall@3": 0.883,
+        "Recall@5": 0.9,
+        "Recall@10": 0.9,
+        "MRR@10": 0.82
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.733,
+        "Recall@3": 0.867,
+        "Recall@5": 0.933,
+        "Recall@10": 0.95,
+        "MRR@10": 0.811
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.717,
+        "Recall@3": 0.883,
+        "Recall@5": 0.95,
+        "Recall@10": 0.967,
+        "MRR@10": 0.807
+      }
+    },
+    "legacy": {
+      "n": 21,
+      "semantic": {
+        "Recall@1": 0.81,
+        "Recall@3": 1.0,
+        "Recall@5": 1.0,
+        "Recall@10": 1.0,
+        "MRR@10": 0.889
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.81,
+        "Recall@3": 0.952,
+        "Recall@5": 1.0,
+        "Recall@10": 1.0,
+        "MRR@10": 0.885
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.905,
+        "Recall@3": 1.0,
+        "Recall@5": 1.0,
+        "Recall@10": 1.0,
+        "MRR@10": 0.952
+      }
+    },
+    "paraphrase": {
+      "n": 60,
+      "semantic": {
+        "Recall@1": 0.3,
+        "Recall@3": 0.483,
+        "Recall@5": 0.6,
+        "Recall@10": 0.667,
+        "MRR@10": 0.416
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.25,
+        "Recall@3": 0.383,
+        "Recall@5": 0.4,
+        "Recall@10": 0.483,
+        "MRR@10": 0.325
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.233,
+        "Recall@3": 0.517,
+        "Recall@5": 0.533,
+        "Recall@10": 0.65,
+        "MRR@10": 0.373
+      }
+    }
+  },
+  "end_to_end_latency_ms": {
+    "p50": 55.7,
+    "p95": 83.6
+  },
+  "latency_breakdown": {
+    "query_encode_ms": {
+      "p50": 44.49,
+      "p95": 62.29
+    },
+    "faiss_search_ms": {
+      "p50": 10.55,
+      "p95": 11.03
+    },
+    "db_fetch_ms": {
+      "p50": 6.53,
+      "p95": 7.5
+    }
+  },
+  "hybrid_weights": {
+    "semantic": 1.0,
+    "bm25": 1.0
+  },
+  "note": "141 synthetic queries; latency measured on this machine, CPU"
+}
