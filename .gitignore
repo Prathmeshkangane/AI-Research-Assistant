@@ -11,3 +11,5 @@ database/
 .env.compose
 ca.pem
 .env.local
+pytest_cache/
+embeddings/paper_embeddings.npy

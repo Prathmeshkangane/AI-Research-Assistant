@@ -36,6 +36,22 @@ app.register_blueprint(summarize_bp)
 with app.app_context():
     db.create_all()
 
+@app.errorhandler(404)
+def not_found(error):
+    return render_template(
+        "error.html", code=404, title="Page not found",
+        message="That page or paper does not exist."
+    ), 404
+
+
+@app.errorhandler(500)
+def server_error(error):
+    return render_template(
+        "error.html", code=500, title="Something went wrong",
+        message="The error has been logged. Please try again."
+    ), 500
+
+
 @app.route("/")
 def home():
     return render_template("register.html")

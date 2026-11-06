@@ -14,8 +14,8 @@ COPY requirements.txt .
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -r requirements.txt
 
-# Download the embedding model into the image at build time
-RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+COPY embeddings/meta.json /tmp/meta.json
+RUN python -c "import json; from sentence_transformers import SentenceTransformer; SentenceTransformer(json.load(open('/tmp/meta.json'))['model'])"
 
 COPY . .
 

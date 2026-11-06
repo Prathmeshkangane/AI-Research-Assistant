@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} — ResearchAI{% endblock %}
+{% block content %}
+<div class="errorpage rise">
+  <div class="code">{{ code }}</div>
+  <h2 style="margin:14px 0 8px">{{ title }}</h2>
+  <p class="muted">{{ message }}</p>
+  <p style="margin-top:26px"><a class="btn btn-primary" href="/dashboard">Back to dashboard</a></p>
+</div>
+{% endblock %}

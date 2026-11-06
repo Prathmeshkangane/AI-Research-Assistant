@@ -163,3 +163,75 @@ def test_save_requires_login(client):
 
 def test_healthz(client):
     assert client.get("/healthz").data == b"ok"
+
+
+# ---------------- embedding settings / ONNX backend ----------------
+def test_settings_prefer_env_then_meta_then_default():
+    from services.semantic_search import resolve_settings, DEFAULT_MODEL
+    meta = {"model": "BAAI/bge-small-en-v1.5", "query_prefix": "Represent:"}
+    assert resolve_settings({}, meta) == ("BAAI/bge-small-en-v1.5", "Represent:", "torch")
+    assert resolve_settings({"EMBED_MODEL": "x/y", "QUERY_PREFIX": "q:", "EMBED_BACKEND": "ONNX"}, meta) == ("x/y", "q:", "onnx")
+    assert resolve_settings({}, {}) == (DEFAULT_MODEL, "", "torch")
+
+
+def test_onnx_backend_adds_prefix_and_normalises(monkeypatch):
+    import importlib
+    import numpy as np
+    from services import semantic_search as ss
+    from tests.conftest import FakeTextEmbedding
+    monkeypatch.setenv("EMBED_BACKEND", "onnx")
+    monkeypatch.setenv("QUERY_PREFIX", "query:")
+    try:
+        importlib.reload(ss)
+        FakeTextEmbedding.seen.clear()
+        vec = ss.encode_query("graph networks")
+        assert FakeTextEmbedding.seen == ["query: graph networks"]
+        assert vec.shape == (1, 384) and abs(float(np.linalg.norm(vec)) - 1.0) < 1e-5
+    finally:
+        monkeypatch.undo()
+        importlib.reload(ss)
+
+
+# ---------------- every page renders with the new templates ----------------
+def test_all_pages_render(logged_in):
+    from models import db
+    from models.chat_history import ChatHistory
+    from tests.conftest import FakeIndex
+    FakeIndex.next = ([0.2, 0.4], [0, 1])
+    db.session.add(ChatHistory(user_id=1, question="What is x?", answer="**Bold** answer [1]."))
+    db.session.commit()
+    logged_in.get("/save/p0"); logged_in.get("/save/p1")
+    pages = ["/dashboard", "/search", "/search?q=graph", "/paper/p0", "/saved-papers", "/ask",
+             "/history", "/summarize/p0", "/compare?paper1=p0&paper2=p1"]
+    for url in pages:
+        r = logged_in.get(url)
+        assert r.status_code == 200, url
+        assert b"ResearchAI" in r.data, url
+    r = logged_in.post("/ask", data={"question": "explain p0"})
+    assert r.status_code == 200 and b'id="src-1"' in r.data
+
+
+def test_auth_pages_render_without_login(client):
+    for url in ["/login", "/register", "/"]:
+        assert client.get(url).status_code == 200, url
+
+
+def test_unknown_page_shows_friendly_404(client):
+    r = client.get("/definitely-not-a-page")
+    assert r.status_code == 404 and b"Page not found" in r.data
+
+
+def test_paper_page_shows_saved_state(logged_in):
+    assert b"Save to library" in logged_in.get("/paper/p0").data
+    logged_in.get("/save/p0")
+    assert b"Saved" in logged_in.get("/paper/p0").data
+
+
+def test_static_assets_are_served(client):
+    assert client.get("/static/css/style.css").status_code == 200
+    assert client.get("/static/js/app.js").status_code == 200
+
+
+def test_login_failure_message_is_visible(client):
+    client.post("/login", data={"email": "nobody@example.com", "password": "wrongwrong"})
+    assert b"Invalid email or password" in client.get("/login").data

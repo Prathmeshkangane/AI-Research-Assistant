@@ -1,0 +1,45 @@
+{% from "_icons.html" import icon %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>{% block title %}ResearchAI{% endblock %}</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0d10'/%3E%3Crect x='1' y='1' width='30' height='30' rx='7' fill='none' stroke='%23e8b563' stroke-width='2'/%3E%3Ctext x='16' y='22.5' font-size='19' font-style='italic' font-family='Georgia,serif' text-anchor='middle' fill='%23e8b563'%3Er%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+{% block nav %}
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="/dashboard"><span class="brand-mark">r</span><span class="wordmark">Research<b>AI</b></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/search" class="{{ 'active' if request.path.startswith(('/search', '/paper')) }}">{{ icon("search") }}Search</a>
+        <a href="/ask" class="{{ 'active' if request.path == '/ask' }}">{{ icon("sparkle") }}Ask AI</a>
+        <a href="/saved-papers" class="{{ 'active' if request.path in ('/saved-papers', '/compare') }}">{{ icon("bookmark") }}Library</a>
+        <a href="/history" class="{{ 'active' if request.path == '/history' }}">{{ icon("clock") }}History</a>
+      </nav>
+      {% if session.get('user_id') %}
+      <div class="user"><b>{{ session.get('username') }}</b><a href="/logout" title="Sign out">{{ icon("logout") }}</a></div>
+      {% endif %}
+    </div>
+  </header>
+{% endblock %}
+
+<main class="shell {% block shell_class %}{% endblock %}">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}{% for msg in messages %}
+      <div class="flash" role="status">{{ icon("info") }}<span>{{ msg }}</span></div>
+    {% endfor %}{% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">Semantic search over a <span>10,000-paper arXiv subset</span> · answers cite the papers they use</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

@@ -4,10 +4,13 @@ eval_retrieval.py - measure how good your ArXiv retrieval really is.
   python eval_retrieval.py gen  --n 40      # add test questions (resumable: run again tomorrow if quota ends)
   python eval_retrieval.py eval --k 10 --tag baseline   # semantic vs BM25 vs hybrid (RRF); saves results_baseline.json
 
-Put this file next to generate_embeddings.py and run from the PROJECT ROOT.
+Lives in evaluation/. Run from the PROJECT ROOT:  python evaluation/eval_retrieval.py eval --k 10 --tag mytag
+Results are written to evaluation/results/.
 """
 import argparse, json, os, random, re, statistics, sys, time
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(os.path.join(HERE, "..")))     # project root (so `from app import app` works)
+RESULTS_DIR = os.path.join(HERE, "results")                    # evaluation/results/
 
 from app import app
 from models.paper import Paper
@@ -151,7 +154,7 @@ def evaluate(eval_set, kmax, tag="", w_sem=1.0, w_bm=1.0):
            "end_to_end_latency_ms": {"p50": round(statistics.median(lat), 1), "p95": round(pct(lat, 95), 1)},
            "latency_breakdown": breakdown, "hybrid_weights": {"semantic": w_sem, "bm25": w_bm},
            "note": f"{len(rows)} synthetic queries; model {ss.EMBED_MODEL}; device {ss.model.device} (set CUDA_VISIBLE_DEVICES=-1 for CPU latency)"}
-    print(json.dumps(out, indent=2)); json.dump(out, open(f"results{'_' + tag if tag else ''}.json", "w"), indent=2)
+    print(json.dumps(out, indent=2)); os.makedirs(RESULTS_DIR, exist_ok=True); json.dump(out, open(os.path.join(RESULTS_DIR, f"results{'_' + tag if tag else ''}.json"), "w"), indent=2)
 
     cases = []
     for i, r in enumerate(rows):
@@ -161,8 +164,8 @@ def evaluate(eval_set, kmax, tag="", w_sem=1.0, w_bm=1.0):
                           "bm25_rank": bm[i].index(gold[i]) + 1 if gold[i] in bm[i] else None,
                           "hybrid_rank": hyb[i].index(gold[i]) + 1 if gold[i] in hyb[i] else None,
                           "semantic_top3_titles": [title.get(x, x) for x in sem[i][:3]]})
-    json.dump(cases, open(f"failures{'_' + tag if tag else ''}.json", "w"), indent=2, ensure_ascii=False)
-    print(f"{len(cases)} queries where the right paper was NOT ranked #1 -> failures{'_' + tag if tag else ''}.json (read these: your error analysis)")
+    json.dump(cases, open(os.path.join(RESULTS_DIR, f"failures{'_' + tag if tag else ''}.json"), "w"), indent=2, ensure_ascii=False)
+    print(f"{len(cases)} queries where the right paper was NOT ranked #1 -> evaluation/results/failures{'_' + tag if tag else ''}.json (read these: your error analysis)")
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["gen", "eval"])
@@ -171,6 +174,6 @@ if __name__ == "__main__":
     ap.add_argument("--w_sem", type=float, default=1.0, help="hybrid weight for semantic results")
     ap.add_argument("--w_bm", type=float, default=1.0, help="hybrid weight for BM25 results")
     ap.add_argument("--tag", default="", help="saves results_<tag>.json so you can compare before/after")
-    ap.add_argument("--out", default="eval_set.json"); ap.add_argument("--eval_set", default="eval_set.json")
+    ap.add_argument("--out", default=os.path.join(HERE, "eval_set.json")); ap.add_argument("--eval_set", default=os.path.join(HERE, "eval_set.json"))
     a = ap.parse_args()
     gen(a.n, a.out) if a.cmd == "gen" else evaluate(a.eval_set, a.k, a.tag, a.w_sem, a.w_bm)

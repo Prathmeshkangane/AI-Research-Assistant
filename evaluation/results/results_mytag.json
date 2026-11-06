@@ -1,0 +1,123 @@
+{
+  "overall": {
+    "n": 141,
+    "semantic": {
+      "Recall@1": 0.603,
+      "Recall@3": 0.752,
+      "Recall@5": 0.794,
+      "Recall@10": 0.858,
+      "MRR@10": 0.691
+    },
+    "bm25_baseline": {
+      "Recall@1": 0.539,
+      "Recall@3": 0.674,
+      "Recall@5": 0.716,
+      "Recall@10": 0.759,
+      "MRR@10": 0.615
+    },
+    "hybrid_rrf": {
+      "Recall@1": 0.553,
+      "Recall@3": 0.752,
+      "Recall@5": 0.773,
+      "Recall@10": 0.879,
+      "MRR@10": 0.66
+    }
+  },
+  "by_query_style": {
+    "keyword": {
+      "n": 60,
+      "semantic": {
+        "Recall@1": 0.867,
+        "Recall@3": 0.933,
+        "Recall@5": 0.933,
+        "Recall@10": 0.967,
+        "MRR@10": 0.901
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.733,
+        "Recall@3": 0.867,
+        "Recall@5": 0.933,
+        "Recall@10": 0.95,
+        "MRR@10": 0.811
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.767,
+        "Recall@3": 0.933,
+        "Recall@5": 0.95,
+        "Recall@10": 0.983,
+        "MRR@10": 0.853
+      }
+    },
+    "legacy": {
+      "n": 21,
+      "semantic": {
+        "Recall@1": 0.857,
+        "Recall@3": 0.905,
+        "Recall@5": 0.952,
+        "Recall@10": 0.952,
+        "MRR@10": 0.893
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.81,
+        "Recall@3": 0.952,
+        "Recall@5": 1.0,
+        "Recall@10": 1.0,
+        "MRR@10": 0.885
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.905,
+        "Recall@3": 0.952,
+        "Recall@5": 1.0,
+        "Recall@10": 1.0,
+        "MRR@10": 0.933
+      }
+    },
+    "paraphrase": {
+      "n": 60,
+      "semantic": {
+        "Recall@1": 0.25,
+        "Recall@3": 0.517,
+        "Recall@5": 0.6,
+        "Recall@10": 0.717,
+        "MRR@10": 0.409
+      },
+      "bm25_baseline": {
+        "Recall@1": 0.25,
+        "Recall@3": 0.383,
+        "Recall@5": 0.4,
+        "Recall@10": 0.483,
+        "MRR@10": 0.325
+      },
+      "hybrid_rrf": {
+        "Recall@1": 0.217,
+        "Recall@3": 0.5,
+        "Recall@5": 0.517,
+        "Recall@10": 0.733,
+        "MRR@10": 0.372
+      }
+    }
+  },
+  "end_to_end_latency_ms": {
+    "p50": 70.8,
+    "p95": 126.0
+  },
+  "latency_breakdown": {
+    "query_encode_ms": {
+      "p50": 23.0,
+      "p95": 32.48
+    },
+    "faiss_search_ms": {
+      "p50": 1.41,
+      "p95": 2.42
+    },
+    "db_fetch_ms": {
+      "p50": 3.38,
+      "p95": 5.68
+    }
+  },
+  "hybrid_weights": {
+    "semantic": 1.0,
+    "bm25": 1.0
+  },
+  "note": "141 synthetic queries; model BAAI/bge-small-en-v1.5; device cuda:0 (set CUDA_VISIBLE_DEVICES=-1 for CPU latency)"
+}

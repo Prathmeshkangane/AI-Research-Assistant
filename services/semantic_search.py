@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import pickle
@@ -6,20 +7,37 @@ import time
 import faiss
 import numpy as np
 
-from sentence_transformers import SentenceTransformer
 from models.paper import Paper
 
 log = logging.getLogger(__name__)
 
 EMB_DIR = os.getenv("EMBEDDINGS_DIR", "embeddings")
+DEFAULT_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
-log.info("Loading semantic search components...")
 
-# Which embedding model / query prefix to use. Defaults = your current setup, so nothing changes unless you set these.
-EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
-QUERY_PREFIX = os.getenv("QUERY_PREFIX", "")      # e.g. "query:" for e5 models, "Represent this sentence for searching relevant passages:" for bge (no trailing space needed)
+def resolve_settings(env, meta):
+    """Which model / query prefix / backend to use.
+    Priority: environment variable > embeddings/meta.json (written by rebuild_embeddings.py) > default.
+    Reading meta.json means the model ALWAYS matches the index it was built with."""
+    model = env.get("EMBED_MODEL") or meta.get("model") or DEFAULT_MODEL
+    prefix = env["QUERY_PREFIX"] if "QUERY_PREFIX" in env else meta.get("query_prefix", "")
+    backend = (env.get("EMBED_BACKEND") or "torch").lower()      # "torch" (sentence-transformers) or "onnx" (fastembed)
+    return model, prefix, backend
 
-model = SentenceTransformer(EMBED_MODEL)
+
+_meta_path = os.path.join(EMB_DIR, "meta.json")
+_meta = json.load(open(_meta_path, encoding="utf-8")) if os.path.exists(_meta_path) else {}
+EMBED_MODEL, QUERY_PREFIX, BACKEND = resolve_settings(os.environ, _meta)
+
+log.info("Loading semantic search components: model=%s backend=%s", EMBED_MODEL, BACKEND)
+
+if BACKEND == "onnx":
+    # Light runtime for the web server: no PyTorch, much less memory.
+    from fastembed import TextEmbedding
+    model = TextEmbedding(model_name=EMBED_MODEL, cache_dir=os.getenv("FASTEMBED_CACHE_PATH"))
+else:
+    from sentence_transformers import SentenceTransformer
+    model = SentenceTransformer(EMBED_MODEL)
 
 index = faiss.read_index(os.path.join(EMB_DIR, "papers.index"))
 
@@ -30,6 +48,9 @@ with open(os.path.join(EMB_DIR, "paper_ids.pkl"), "rb") as f:
 def encode_query(text):
     """Query vector, L2-normalised (so cosine = 1 - L2_distance / 2 holds for any model)."""
     text = f"{QUERY_PREFIX} {text}" if QUERY_PREFIX else text
+    if BACKEND == "onnx":
+        vec = np.asarray(list(model.embed([text])), dtype="float32").reshape(1, -1)
+        return vec / np.maximum(np.linalg.norm(vec, axis=1, keepdims=True), 1e-12)
     return model.encode([text], normalize_embeddings=True).astype("float32")
 
 
