@@ -1,0 +1,82 @@
+{
+  "on01": {
+    "label": "supported",
+    "note": "Refusal is fair: the abstract gives the viscosity jump and chain relaxation, but not a causal mechanism."
+  },
+  "on02": {
+    "label": "supported",
+    "note": ""
+  },
+  "on03": {
+    "label": "partial",
+    "note": "Abstract [1] (9-state adiabatic QC) never says the array is uniform or identical. Only the QCA claim [3] covers 'uniform'."
+  },
+  "on04": {
+    "label": "supported",
+    "note": "All three [2][3][4] claims match, but they only loosely answer 'exact formulas without external forces'."
+  },
+  "on05": {
+    "label": "supported",
+    "note": "Refusal is correct. The [3] description (EDMs, CKM phase, RPV) matches its abstract."
+  },
+  "on06": {
+    "label": "supported",
+    "note": ""
+  },
+  "on07": {
+    "label": "supported",
+    "note": ""
+  },
+  "on08": {
+    "label": "supported",
+    "note": "Refusal is correct. Only the QMD paper is relevant and it does not say what happens in the collisions."
+  },
+  "on09": {
+    "label": "false_refusal",
+    "note": "Source [1] is about water demand forecasting and says ANNs perform better than SVMs. 'Municipal fluid consumption' means water demand, so the answer should say ANN."
+  },
+  "on10": {
+    "label": "supported",
+    "note": ""
+  },
+  "on11": {
+    "label": "supported",
+    "note": ""
+  },
+  "on12": {
+    "label": "supported",
+    "note": "Refusal is correct. No source covers probability amplitudes for cosmological geometries."
+  },
+  "on13": {
+    "label": "supported",
+    "note": "Citations [1][3][4] match their abstracts."
+  },
+  "on14": {
+    "label": "supported",
+    "note": ""
+  },
+  "on15": {
+    "label": "partial",
+    "note": "Bullet 4 says 'pbar/p' ratios. The abstract says pbar(p)/pi ratios."
+  },
+  "on16": {
+    "label": "supported",
+    "note": "Hedged properly, and the claims about [2] match."
+  },
+  "on17": {
+    "label": "supported",
+    "note": ""
+  },
+  "on18": {
+    "label": "supported",
+    "note": "Refusal is correct. No source covers UV/optical surveys of peculiar evolved stars in globular clusters."
+  },
+  "on19": {
+    "label": "supported",
+    "note": ""
+  },
+  "on20": {
+    "label": "supported",
+    "note": "Claims for [2][3][4][5] match. Source [3] actually finds no evidence of decoherence, and the answer says only 'probes'."
+  }
+}

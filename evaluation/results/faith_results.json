@@ -1,0 +1,11 @@
+{
+  "on_topic": {
+    "supported": 17,
+    "partial": 2,
+    "false_refusal": 1
+  },
+  "off_topic": {},
+  "threshold": 0.55,
+  "n_on": 20,
+  "n_off": 0
+}
