@@ -1,0 +1,1 @@
+![CI](https://github.com/Prathmeshkangane/AI-Research-Assistant/actions/workflows/ci.yml/badge.svg)
