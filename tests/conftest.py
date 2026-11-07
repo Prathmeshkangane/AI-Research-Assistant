@@ -53,6 +53,20 @@ fake_st.SentenceTransformer = FakeSentenceTransformer
 sys.modules["sentence_transformers"] = fake_st
 
 
+class FakeTextEmbedding:
+    seen = []                       # every text sent for encoding
+    def __init__(self, model_name=None, cache_dir=None, **k): pass
+    def embed(self, texts, **k):
+        for t in texts:
+            FakeTextEmbedding.seen.append(t)
+            yield np.arange(1, 385, dtype="float32")     # not unit length on purpose
+
+
+fake_fastembed = types.ModuleType("fastembed")
+fake_fastembed.TextEmbedding = FakeTextEmbedding
+sys.modules["fastembed"] = fake_fastembed
+
+
 class FakeGemini:
     prompts = []          # every prompt sent
     reply = "Answer [1]."  # what the "LLM" says
